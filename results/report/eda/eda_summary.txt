@@ -1,0 +1,51 @@
+=== CORPUS EDA: emoji use vs. label ===
+Total tweets (dropna text/label): 900
+  gold balance: {'negative': 450, 'positive': 450}
+Emoji-bearing tweets: 165  (18.3%)
+  gold balance (emoji slice): {'positive': 90, 'negative': 75}
+Non-emoji tweets: 735  (81.7%)
+  gold balance (non-emoji): {'negative': 375, 'positive': 360}
+
+Emoji TOKENS (total occurrences): 331
+Emoji TYPES (distinct tags used): 60
+  ESR-uncovered types: 7/60  (tokens: 26)
+
+--- USAGE POLARITY (the type-vs-token point) ---
+TOKEN-level by MASTER sign: {'positive': 223, 'negative': 108}
+TOKEN-level by ESR sign:    {'POS': 263, 'NEU': 22, 'uncovered': 26, 'NEG': 20}
+TYPE-level (corpus-used) by MASTER: {'positive': 28, 'negative': 32}
+TYPE-level (corpus-used) by ESR:    {'POS': 35, 'NEU': 9, 'uncovered': 7, 'NEG': 9}
+TYPE-level (WHOLE lexicon) by MASTER: {'negative': 87, 'positive': 78}  <- the 87neg/78pos figure
+
+--- EMOJI PER TWEET (emoji-bearing only) ---
+  1 emoji: 65 tweets
+  2 emoji: 62 tweets
+  3 emoji: 27 tweets
+  4 emoji: 3 tweets
+  5 emoji: 3 tweets
+  6 emoji: 2 tweets
+  7 emoji: 2 tweets
+  8 emoji: 1 tweets
+  mean emoji/tweet: 2.01  median: 2  max: 8
+
+--- TWEET LENGTH (words, tags+unicode stripped) ---
+  emoji-bearing:  mean 12.8  median 13
+  non-emoji:      mean 13.5  median 14
+
+--- TOP 15 EMOJI ---
+tag                                   emoji tok  tw  g+  g-  mstr       esr
+ok hand                               👌     43  26  23   3  posi       POS
+victory hand                          ✌     41  25  23   2  posi       POS
+face with tears of joy                😂     16   9   1   8  posi       POS
+folded hands                          🙏     15  11  10   1  posi       POS
+smiling face with smiling eyes        😊     15   9   8   1  posi       POS
+face with stuck-out tounges           😛     12  11   4   7  nega       POS
+fire                                  🔥     11   5   1   4  nega       NEU
+thumbs up                             👍     10   6   4   2  posi       POS
+smiling face with sunglasses          😎     10   7   5   2  posi       POS
+face with stuck-out tongue & closed e 😝     10   6   0   6  nega       POS
+zipper-mouth face                     🤐      9   5   0   5  nega uncovered
+grining face with smile eye           😁      9   7   2   5  posi       POS
+face blowing a kiss                   😘      8   5   5   0  posi       POS
+tongue                                👅      7   6   0   6  nega       POS
+thinking face                         🤔      7   3   0   3  nega uncovered

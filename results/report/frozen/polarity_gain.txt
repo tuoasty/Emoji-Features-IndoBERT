@@ -1,0 +1,48 @@
+=== Polarity gain [frozen]: gain by GOLD polarity + direction of change (emoji slice) ===
+F1 headline variant = f1_master_ours
+
+  Per-condition emoji-slice accuracy, split by gold polarity (per-tweet majority vote):
+    cond          neg acc (n)        pos acc (n)        all acc (n)
+    B0          78.67 (59/75)      62.22 (56/90)    69.70 (115/165)
+    B1          78.67 (59/75)      67.78 (61/90)    72.73 (120/165)
+    T1          78.67 (59/75)      63.33 (57/90)    70.30 (116/165)
+    F1          82.67 (62/75)      72.22 (65/90)    76.97 (127/165)
+
+  --- GAIN BY POLARITY ---
+
+  B0 -> T1  gain (acc T1 - acc B0), by gold polarity:
+    gold          n       B0 acc       T1 acc  gain(pp)  disc(a/b)  McNemar p
+    negative     75       78.67       78.67     +0.00        5/5     1.0000
+    positive     90       62.22       63.33     +1.11        6/7     1.0000
+    ALL         165       69.70       70.30     +0.61      11/12     1.0000
+
+  B0 -> B1  gain (acc B1 - acc B0), by gold polarity:
+    gold          n       B0 acc       B1 acc  gain(pp)  disc(a/b)  McNemar p
+    negative     75       78.67       78.67     +0.00        2/2     1.0000
+    positive     90       62.22       67.78     +5.56        2/7     0.1797
+    ALL         165       69.70       72.73     +3.03        4/9     0.2668
+
+  B0 -> F1  gain (acc F1 - acc B0), by gold polarity:
+    gold          n       B0 acc       F1 acc  gain(pp)  disc(a/b)  McNemar p
+    negative     75       78.67       82.67     +4.00        5/8     0.5811
+    positive     90       62.22       72.22    +10.00       3/12     0.0352
+    ALL         165       69.70       76.97     +7.27       8/20     0.0357
+
+  T1 -> F1  gain (acc F1 - acc T1), by gold polarity:
+    gold          n       T1 acc       F1 acc  gain(pp)  disc(a/b)  McNemar p
+    negative     75       78.67       82.67     +4.00        1/4     0.3750
+    positive     90       63.33       72.22     +8.89        1/9     0.0215
+    ALL         165       70.30       76.97     +6.67       2/13     0.0074
+
+  DIRECTION-OF-CHANGE: b0_pred -> t1_pred label flips (adding emoji tags):
+    gold          n  no-flip  neg->pos  pos->neg
+    negative     75       65         5         5
+    positive     90       77         7         6
+    (a flip TOWARD the gold sign = correction; adding emoji nudges the label)
+
+  HELPED / HURT correctness transitions B0 -> T1, by gold polarity:
+    gold          n  helped   hurt   net
+    negative     75       5      5    +0
+    positive     90       7      6    +1
+
+  CAVEAT: subgroup n ~75/90; cells are small. Read as descriptive + effect size.

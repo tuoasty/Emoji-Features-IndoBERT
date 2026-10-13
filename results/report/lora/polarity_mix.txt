@@ -1,0 +1,40 @@
+=== Polarity mix [lora]: harm by emoji polarity mix x gold (emoji slice, seed-majority) ===
+conditions present: ['b0', 't1', 't1_pos', 't1_neg']
+
+  Accuracy (%) per cell:
+    emoji mix      gold         n       b0       t1   t1_pos   t1_neg
+    negative only  negative    45    77.78    77.78    80.00    95.56
+    negative only  positive     2     0.00     0.00     0.00     0.00
+    positive only  negative    13    92.31    84.62    76.92    92.31
+    positive only  positive    83    73.49    80.72    87.95    78.31
+    both           negative    17    88.24    82.35    70.59   100.00
+    both           positive     5    20.00    40.00    60.00    20.00
+
+  B0 -> t1: helped / hurt / net per cell
+    emoji mix      gold         n  helped   hurt   net
+    negative only  negative    45       1      1    +0
+    negative only  positive     2       0      0    +0
+    positive only  negative    13       0      1    -1
+    positive only  positive    83       7      1    +6
+    both           negative    17       0      1    -1
+    both           positive     5       1      0    +1
+
+  B0 -> t1_pos: helped / hurt / net per cell
+    emoji mix      gold         n  helped   hurt   net
+    negative only  negative    45       1      0    +1
+    negative only  positive     2       0      0    +0
+    positive only  negative    13       0      2    -2
+    positive only  positive    83      13      1   +12
+    both           negative    17       0      3    -3
+    both           positive     5       2      0    +2
+
+  B0 -> t1_neg: helped / hurt / net per cell
+    emoji mix      gold         n  helped   hurt   net
+    negative only  negative    45       8      0    +8
+    negative only  positive     2       0      0    +0
+    positive only  negative    13       0      0    +0
+    positive only  positive    83       4      0    +4
+    both           negative    17       2      0    +2
+    both           positive     5       0      0    +0
+
+  CAVEAT: cells are small (some n < 20). Descriptive only.

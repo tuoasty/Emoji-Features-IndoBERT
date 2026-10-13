@@ -1,0 +1,61 @@
+﻿emoji,tag,tokens,tweets,gold_pos,gold_neg,p_pos,pmi_pos,gold_sign,master_sign,esr_sign,fisher_p,chi2_p,val_stance_gap
+👌,ok hand,43,26,23,3,0.8846,0.8231,POS,positive,POS,0.0001,0.0002,False
+✌,victory hand,41,25,23,2,0.92,0.8797,POS,positive,POS,0.0,0.0,False
+😂,face with tears of joy,16,9,1,8,0.1111,-2.1699,NEG,positive,POS,0.0381,0.0444,True
+🙏,folded hands,15,11,10,1,0.9091,0.8625,POS,positive,POS,0.0112,0.0152,False
+😊,smiling face with smiling eyes,15,9,8,1,0.8889,0.8301,POS,positive,POS,0.0381,0.0444,False
+😛,face with stuck-out tounges,12,11,4,7,0.3636,-0.4594,NEG,negative,POS,0.5463,0.544,True
+🔥,fire,11,5,1,4,0.2,-1.3219,NEG,negative,NEU,0.3736,0.3698,False
+👍,thumbs up,10,6,4,2,0.6667,0.415,POS,positive,POS,0.6865,0.6821,False
+😎,smiling face with sunglasses,10,7,5,2,0.7143,0.5146,POS,positive,POS,0.4513,0.4479,False
+😝,face with stuck-out tongue & closed eyes,10,6,0,6,0.0,-inf,NEG,negative,POS,0.0307,0.0406,True
+🤐,zipper-mouth face,9,5,0,5,0.0,-inf,NEG,negative,uncovered,0.0618,0.0728,False
+😁,grining face with smile eye,9,7,2,5,0.2857,-0.8074,NEG,positive,POS,0.4513,0.4479,True
+😘,face blowing a kiss,8,5,5,0,1.0,inf,POS,positive,POS,0.0618,0.0728,False
+👅,tongue,7,6,0,6,0.0,-inf,NEG,negative,POS,0.0307,0.0406,True
+🤔,thinking face,7,3,0,3,0.0,-inf,NEG,negative,uncovered,0.2492,0.2474,False
+😬,grimacing face,6,4,0,4,0.0,-inf,NEG,negative,POS,0.1242,0.1328,True
+✔,heavy check mark,6,3,3,0,1.0,inf,POS,positive,POS,0.2492,0.2474,False
+😄,smiling face with open mouth & smiling eyes,5,5,1,4,0.2,-1.3219,NEG,positive,POS,0.3736,0.3698,True
+👎,thumbs down,5,4,0,4,0.0,-inf,NEG,negative,NEG,0.1242,0.1328,False
+😆,smiling face with open mouth & closed eyes,5,4,1,3,0.25,-1.0,NEG,positive,POS,0.6242,0.6163,True
+😍,smiling face with heart-eyes,5,4,4,0,1.0,inf,POS,positive,POS,0.1242,0.1328,False
+🤣,rolling on the floor laughing,4,2,0,2,0.0,-inf,NEG,positive,uncovered,0.4994,0.479,False
+☹,frowning face,4,3,1,2,0.3333,-0.585,NEG,negative,NEG,1.0,1.0,False
+👏,clapping hands,4,3,1,2,0.3333,-0.585,NEG,positive,POS,1.0,1.0,True
+😱,face screaming in fear,4,2,0,2,0.0,-inf,NEG,negative,POS,0.4994,0.479,True
+❤,lovered,4,2,2,0,1.0,inf,POS,positive,POS,0.4994,0.479,False
+👊,oncoming fist,3,2,1,1,0.5,0.0,TIE,positive,POS,1.0,1.0,False
+😤,face with steam from nose,3,2,0,2,0.0,-inf,NEG,negative,NEG,0.4994,0.479,False
+🙌,raising hands,3,1,1,0,1.0,inf,POS,positive,POS,1.0,1.0,False
+🏆,trophy,3,2,2,0,1.0,inf,POS,positive,POS,0.4994,0.479,False
+😀,grining face,3,1,0,1,0.0,-inf,NEG,positive,POS,1.0,1.0,True
+🏃,person running,3,1,0,1,0.0,-inf,NEG,negative,POS,1.0,1.0,True
+🌟,glowing star,3,1,1,0,1.0,inf,POS,positive,POS,1.0,1.0,False
+😣,persevering face,2,1,0,1,0.0,-inf,NEG,negative,NEG,1.0,1.0,False
+🐽,pig nose,2,1,0,1,0.0,-inf,NEG,negative,NEU,1.0,1.0,False
+😓,face with cold sweat,2,1,0,1,0.0,-inf,NEG,negative,NEU,1.0,1.0,False
+🤗,hugging face,2,1,1,0,1.0,inf,POS,positive,uncovered,1.0,1.0,False
+⚡,high voltage,2,1,0,1,0.0,-inf,NEG,negative,POS,1.0,1.0,True
+😞,disappointed face,2,2,0,2,0.0,-inf,NEG,negative,NEU,0.4994,0.479,False
+😩,weary face,2,1,0,1,0.0,-inf,NEG,negative,NEG,1.0,1.0,False
+🤥,lying face,2,1,0,1,0.0,-inf,NEG,negative,uncovered,1.0,1.0,False
+😮,face with open mouth,1,1,0,1,0.0,-inf,NEG,negative,POS,1.0,1.0,True
+😠,angry face,1,1,0,1,0.0,-inf,NEG,negative,NEG,1.0,1.0,False
+🙇,person bowing,1,1,0,1,0.0,-inf,NEG,negative,NEU,1.0,1.0,False
+😑,expressionless face,1,1,0,1,0.0,-inf,NEG,negative,NEG,1.0,1.0,False
+🤘,sign of the horns,1,1,1,0,1.0,inf,POS,positive,uncovered,1.0,1.0,False
+😋,face savouring delicious food,1,1,1,0,1.0,inf,POS,negative,POS,1.0,1.0,False
+😚,kissing face with closed eyes,1,1,1,0,1.0,inf,POS,positive,POS,1.0,1.0,False
+💣,bomb,1,1,0,1,0.0,-inf,NEG,negative,NEU,1.0,1.0,False
+💔,broken heart,1,1,0,1,0.0,-inf,NEG,negative,NEU,1.0,1.0,False
+🙊,speak-no-evil,1,1,0,1,0.0,-inf,NEG,negative,POS,1.0,1.0,True
+🙁,slightly frowning face,1,1,0,1,0.0,-inf,NEG,negative,uncovered,1.0,1.0,False
+😡,pouting face,1,1,0,1,0.0,-inf,NEG,negative,NEG,1.0,1.0,False
+😕,confused face,1,1,0,1,0.0,-inf,NEG,negative,NEG,1.0,1.0,False
+🙈,see-no-evil monkey,1,1,0,1,0.0,-inf,NEG,negative,POS,1.0,1.0,True
+💘,heart with arrow,1,1,1,0,1.0,inf,POS,positive,POS,1.0,1.0,False
+😶,face without mouth,1,1,0,1,0.0,-inf,NEG,negative,NEU,1.0,1.0,False
+🙋,person raising hand,1,1,0,1,0.0,-inf,NEG,positive,POS,1.0,1.0,True
+😅,smiling face with open mouth & cold sweat,1,1,0,1,0.0,-inf,NEG,positive,POS,1.0,1.0,True
+😹,cat face with tears of joy,1,1,1,0,1.0,inf,POS,positive,NEU,1.0,1.0,False

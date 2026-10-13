@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+data/*.csv
+# ship the report files behind the paper; predictions, logs and trainer scratch stay local
+results/*
+!results/report/

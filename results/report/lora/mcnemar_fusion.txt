@@ -1,0 +1,13 @@
+=== Lexicon feature vs tag-text [lora]: per-tweet McNemar, EMOJI slice ===
+  seed-majority correctness, paired on (fold, val_index); exact McNemar p
+  'A only' = tweets A gets right and B gets wrong
+    A                      B                         n  A only  B only  McNemar p
+    T1                     T1+L (master, cont.)    165       3       3     1.0000
+    T1                     T1+L (master, pres.)    165       2       5     0.4531
+    T1                     T1+L (ESR, cont.)       165       2       3     1.0000
+    T1                     T1+L (ESR, pres.)       165       2       5     0.4531
+    T1+L (master, pres.)   T1+L (master, cont.)    165       7       4     0.5488
+    T1+L (ESR, pres.)      T1+L (ESR, cont.)       165       2       0     0.5000
+
+  Presence features, master vs ESR: differ on 36 of 900 tweets
+  (all tweets; the feature does not depend on training).

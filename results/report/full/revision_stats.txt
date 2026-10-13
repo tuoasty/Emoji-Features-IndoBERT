@@ -1,0 +1,147 @@
+Revision statistics [full] (analysis/revision_stats.py)
+F1 / T1+L = f1_master_ours; conditions loaded: ['b0', 'b1', 'f1_esr_ang', 'f1_esr_ours', 'f1_master_ang', 'f1_master_ours', 't1']
+
+=== DAT-1: polarity asymmetry (emoji slice, seed-majority) ===
+  Fisher exact on discordant tweets: rows = gold half, cols = helped/hurt vs B0
+    contrast                    pos h/h  neg h/h  Fisher p  McNemar pos McNemar neg
+    B0 -> T1                     5/0      4/3       0.2045       0.0625      1.0000
+    B0 -> T1+L (master, cont.)   7/0      2/3       0.0455       0.0156      1.0000
+    B0 -> B1                     5/0      0/4       0.0079       0.0625      0.1250
+
+  Direction of changed predictions vs B0 (two-sided binomial, H0: 50/50)
+    B0 -> T1                   toward positive  8 of 12  p = 0.3877
+    B0 -> T1+L (master, cont.) toward positive 10 of 12  p = 0.0386
+    B0 -> B1                   toward positive  9 of  9  p = 0.0039
+
+  Multiple-comparison families (alpha = 0.05)
+    RQ1: six McNemar contrasts, all emoji tweets  [m=6, Bonferroni threshold 0.0083]
+      B0 vs B1               p = 1.0000   Bonferroni fails     Holm (thr 0.0250) fails
+      B0 vs T1               p = 0.1460   Bonferroni fails     Holm (thr 0.0083) fails
+      B0 vs T1+L (master, cont.) p = 0.1460   Bonferroni fails     Holm (thr 0.0100) fails
+      B1 vs T1               p = 0.2668   Bonferroni fails     Holm (thr 0.0125) fails
+      B1 vs T1+L (master, cont.) p = 0.3018   Bonferroni fails     Holm (thr 0.0167) fails
+      T1 vs T1+L (master, cont.) p = 1.0000   Bonferroni fails     Holm (thr 0.0500) fails
+    RQ3 (2): positive halves, B0->T1 and B0->T1+L  [m=2, Bonferroni threshold 0.0250]
+      B0->T1 pos             p = 0.0625   Bonferroni fails     Holm (thr 0.0500) fails
+      B0->T1+L pos           p = 0.0156   Bonferroni survives  Holm (thr 0.0250) survives
+    RQ3 (4): B0->T1 and B0->T1+L, both halves  [m=4, Bonferroni threshold 0.0125]
+      B0->T1 pos             p = 0.0625   Bonferroni fails     Holm (thr 0.0167) fails
+      B0->T1 neg             p = 1.0000   Bonferroni fails     Holm (thr 0.0250) fails
+      B0->T1+L pos           p = 0.0156   Bonferroni fails     Holm (thr 0.0125) fails
+      B0->T1+L neg           p = 1.0000   Bonferroni fails     Holm (thr 0.0500) fails
+    RQ3 (8): B0->T1, B0->B1, B0->T1+L, T1->T1+L, both halves  [m=8, Bonferroni threshold 0.0063]
+      B0->T1 pos             p = 0.0625   Bonferroni fails     Holm (thr 0.0071) fails
+      B0->T1 neg             p = 1.0000   Bonferroni fails     Holm (thr 0.0250) fails
+      B0->B1 pos             p = 0.0625   Bonferroni fails     Holm (thr 0.0083) fails
+      B0->B1 neg             p = 0.1250   Bonferroni fails     Holm (thr 0.0100) fails
+      B0->T1+L pos           p = 0.0156   Bonferroni fails     Holm (thr 0.0063) fails
+      B0->T1+L neg           p = 1.0000   Bonferroni fails     Holm (thr 0.0500) fails
+      T1->T1+L pos           p = 0.6875   Bonferroni fails     Holm (thr 0.0125) fails
+      T1->T1+L neg           p = 0.6875   Bonferroni fails     Holm (thr 0.0167) fails
+    Between-halves (2): Fisher, B0->T1 and B0->T1+L  [m=2, Bonferroni threshold 0.0250]
+      Fisher B0->T1          p = 0.2045   Bonferroni fails     Holm (thr 0.0500) fails
+      Fisher B0->T1+L        p = 0.0455   Bonferroni fails     Holm (thr 0.0250) fails
+
+=== DAT-2: predicted-positive rate, recall by half, macro-F1 (emoji slice, seed-majority label) ===
+  gold-positive share: 90/165 = 54.55%
+    condition               pred-pos rate  pos recall  neg recall  macro-F1  accuracy
+    B0                             46.67%      73.33%      85.33%     78.78     78.79
+    B1                             52.12%      78.89%      80.00%     79.30     79.39
+    T1                             49.09%      78.89%      86.67%     82.40     82.42
+    T1+L (ESR, pres.)              50.30%      77.78%      82.67%     79.95     80.00
+    T1+L (ESR, cont.)              49.70%      77.78%      84.00%     80.57     80.61
+    T1+L (master, pres.)           49.70%      77.78%      84.00%     80.57     80.61
+    T1+L (master, cont.)           51.52%      81.11%      84.00%     82.36     82.42
+
+=== DAT-3: paired bootstrap 95% CI of accuracy difference (pp), emoji tweets, seed-majority, 10000 resamples, rng seed 0 ===
+    contrast                           subset    n    diff             95% CI
+    B0 -> T1                           all     165   +3.64 [ +0.00,  +7.88]
+    B0 -> T1                           pos      90   +5.56 [ +1.11, +10.00]
+    B0 -> T1                           neg      75   +1.33 [ -5.33,  +8.00]
+    B0 -> B1                           all     165   +0.61 [ -3.03,  +4.24]
+    B0 -> B1                           pos      90   +5.56 [ +1.11, +11.11]
+    B0 -> B1                           neg      75   -5.33 [-10.67,  -1.33]
+    B0 -> T1+L (master, cont.)         all     165   +3.64 [ +0.00,  +7.88]
+    B0 -> T1+L (master, cont.)         pos      90   +7.78 [ +3.33, +13.33]
+    B0 -> T1+L (master, cont.)         neg      75   -1.33 [ -8.00,  +4.00]
+    T1 -> T1+L (ESR, pres.)            all     165   -2.42 [ -6.67,  +1.82]
+    T1 -> T1+L (ESR, cont.)            all     165   -1.82 [ -6.06,  +1.82]
+    T1 -> T1+L (master, pres.)         all     165   -1.82 [ -6.06,  +1.82]
+    T1 -> T1+L (master, cont.)         all     165   +0.00 [ -4.24,  +4.24]
+
+  Paired fold-level differences, emoji slice (seed-averaged per fold; n=5 folds)
+    contrast                                                fold diffs (pp)    mean  sample SD
+    B0 -> T1                              +2.30  -1.39  +7.32  +6.86  +1.80   +3.38       3.68
+    B0 -> B1                              -1.15  -1.39  +5.69  +0.00  +0.00   +0.63       2.90
+    B0 -> T1+L (master, cont.)            +2.30  +2.78  +6.50  +4.90  +2.70   +3.84       1.80
+    T1 -> T1+L (ESR, pres.)               -1.15  +0.00  -4.07  -0.98  -0.90   -1.42       1.55
+    T1 -> T1+L (ESR, cont.)               -1.15  +0.00  -3.25  -2.94  +0.00   -1.47       1.56
+    T1 -> T1+L (master, pres.)            -1.15  +0.00  -4.88  -0.98  +0.00   -1.40       2.02
+    T1 -> T1+L (master, cont.)            +0.00  +4.17  -0.81  -1.96  +0.90   +0.46       2.33
+
+  Fold-mean vs per-tweet (seed-majority) emoji-slice difference
+    B0 -> T1                           fold-mean +3.38  per-tweet +3.64  (B0 78.79 -> T1 82.42)
+    B0 -> T1+L (master, cont.)         fold-mean +3.84  per-tweet +3.64  (B0 78.79 -> T1+L (master, cont.) 82.42)
+
+=== DAT-4: per-seed exact McNemar, emoji slice (each seed's own predictions) ===
+    contrast (a -> b)                           seed 0   b/a   p       seed 1   b/a   p       seed 42  b/a   p     
+    B0 -> B1                                      7/5   0.7744      2/1   1.0000      8/6   0.7905  
+    B0 -> T1                                      9/2   0.0654     11/4   0.1185     11/6   0.3323  
+    B0 -> T1+L (master, cont.)                    8/3   0.2266      9/5   0.4240     15/4   0.0192  
+    B1 -> T1                                     10/5   0.3018     10/4   0.1796     10/7   0.6291  
+    B1 -> T1+L (master, cont.)                    9/6   0.6072      8/5   0.5811     14/5   0.0636  
+    T1 -> T1+L (master, cont.)                    4/6   0.7539      3/6   0.5078     10/4   0.1796  
+    T1 -> T1+L (ESR, pres.)                       4/6   0.7539      5/11  0.2101      5/5   1.0000  
+    T1 -> T1+L (ESR, cont.)                       3/6   0.5078      5/11  0.2101      6/5   1.0000  
+    T1 -> T1+L (master, pres.)                    4/5   1.0000      5/12  0.1435      5/5   1.0000  
+    T1+L (master, pres.) -> T1+L (master, cont.)    1/2   1.0000     10/6   0.4545     11/5   0.2101  
+    T1+L (ESR, pres.) -> T1+L (ESR, cont.)        2/3   1.0000      0/0   1.0000      4/3   1.0000  
+    B0 -> T1 [pos]                                5/0   0.0625      8/0   0.0078      7/2   0.1797  
+    B0 -> T1 [neg]                                4/2   0.6875      3/4   1.0000      4/4   1.0000  
+    B0 -> T1+L (master, cont.) [pos]              5/1   0.2188      8/0   0.0078     10/3   0.0923  
+    B0 -> T1+L (master, cont.) [neg]              3/2   1.0000      1/5   0.2188      5/1   0.2188  
+  (b/a = tweets only b gets right / only a gets right)
+
+  Per-seed between-halves Fisher (helped/hurt vs B0 by gold half)
+    B0 -> T1                      seed 0: pos 5/0 neg 4/2 p=0.4545  seed 1: pos 8/0 neg 3/4 p=0.0256  seed 42: pos 7/2 neg 4/4 p=0.3348
+    B0 -> T1+L (master, cont.)    seed 0: pos 5/1 neg 3/2 p=0.5455  seed 1: pos 8/0 neg 1/5 p=0.0030  seed 42: pos 10/3 neg 5/1 p=1.0000
+
+=== DAT-5: duplicate / retweet check, 900 raw tweets ===
+  tweets starting with 'RT @': 0
+  exact text: 2 duplicate groups, 2 redundant tweets; 2 groups span >1 fold; 0 have conflicting labels; 0 contain emoji
+      rows [36, 126] folds [3, 4] labels [0, 0]: 'ahoker masih bully #AHY'
+      rows [625, 738] folds [0, 2] labels [0, 0]: 'Setelah KO di beberapa Polling, kini mereka goreng soal KPUD tidak netral, kamvreetttt....'
+  normalized: 4 duplicate groups, 4 redundant tweets; 4 groups span >1 fold; 0 have conflicting labels; 0 contain emoji
+      rows [36, 126] folds [3, 4] labels [0, 0]: 'ahoker masih bully #AHY'
+      rows [322, 420] folds [1, 0] labels [0, 0]: '#Djarot Beberkan Kronologi Pengusiran Dirinya Setelah Sholat Jumat http://bit.ly/2pgp5M1 #'
+      rows [465, 772] folds [2, 4] labels [1, 1]: 'Saatnya menerima gubernur baru. Terima kasih kepada gubernur lama. Sudahi perselisihan, ma'
+      rows [625, 738] folds [0, 2] labels [0, 0]: 'Setelah KO di beberapa Polling, kini mereka goreng soal KPUD tidak netral, kamvreetttt....'
+
+=== DAT-6: master vs ESR presence features, where they differ (900 tweets) ===
+  differing tweets: 36
+    master neg -> ESR pos: 18 tweets; emoji whose master and ESR classes disagree (tweets containing each):
+          6  face with stuck-out tounges (master neg, ESR pos)
+          4  grimacing face (master neg, ESR pos)
+          2  tongue (master neg, ESR pos)
+          2  face with stuck-out tongue & closed eyes (master neg, ESR pos)
+          1  person bowing (master neg, ESR pos)
+          1  fire (master neg, ESR neut)
+          1  speak-no-evil (master neg, ESR pos)
+          1  face screaming in fear (master neg, ESR pos)
+          1  see-no-evil monkey (master neg, ESR pos)
+    master neg -> ESR none: 12 tweets; emoji whose master and ESR classes disagree (tweets containing each):
+          4  zipper-mouth face (master neg, ESR uncovered)
+          3  fire (master neg, ESR neut)
+          1  thinking face (master neg, ESR uncovered)
+          1  pig nose (master neg, ESR neut)
+          1  bomb (master neg, ESR neut)
+          1  high voltage (master neg, ESR neut)
+          1  slightly frowning face (master neg, ESR uncovered)
+    master pos -> ESR none: 6 tweets; emoji whose master and ESR classes disagree (tweets containing each):
+          3  heavy check mark (master pos, ESR neut)
+          1  rolling on the floor laughing (master pos, ESR uncovered)
+          1  sign of the horns (master pos, ESR uncovered)
+          1  glowing star (master pos, ESR neut)
+  tweets with only master-negative emoji: 47  gold-negative 45, gold-positive 2
+  tweets with only master-positive emoji: 96  gold-negative 13, gold-positive 83
+

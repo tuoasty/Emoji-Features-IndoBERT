@@ -1,0 +1,61 @@
+﻿tag,emoji,tokens,tweets,gold_pos,gold_neg,master_sign,esr_sign,esr_pos,esr_neg
+ok hand,👌,43,26,23,3,positive,POS,0.657,0.094
+victory hand,✌,41,25,23,2,positive,POS,0.577,0.113
+face with tears of joy,😂,16,9,1,8,positive,POS,0.468,0.247
+folded hands,🙏,15,11,10,1,positive,POS,0.498,0.081
+smiling face with smiling eyes,😊,15,9,8,1,positive,POS,0.704,0.059
+face with stuck-out tounges,😛,12,11,4,7,negative,POS,0.691,0.082
+fire,🔥,11,5,1,4,negative,NEU,0.263,0.123
+thumbs up,👍,10,6,4,2,positive,POS,0.637,0.115
+smiling face with sunglasses,😎,10,7,5,2,positive,POS,0.598,0.105
+face with stuck-out tongue & closed eyes,😝,10,6,0,6,negative,POS,0.556,0.131
+zipper-mouth face,🤐,9,5,0,5,negative,uncovered,,
+grining face with smile eye,😁,9,7,2,5,positive,POS,0.577,0.127
+face blowing a kiss,😘,8,5,5,0,positive,POS,0.755,0.053
+tongue,👅,7,6,0,6,negative,POS,0.589,0.121
+thinking face,🤔,7,3,0,3,negative,uncovered,,
+grimacing face,😬,6,4,0,4,negative,POS,0.463,0.266
+heavy check mark,✔,6,3,3,0,positive,POS,0.398,0.124
+smiling face with open mouth & smiling eyes,😄,5,5,1,4,positive,POS,0.559,0.137
+thumbs down,👎,5,4,0,4,negative,NEG,0.306,0.496
+smiling face with open mouth & closed eyes,😆,5,4,1,3,positive,POS,0.565,0.154
+smiling face with heart-eyes,😍,5,4,4,0,positive,POS,0.73,0.052
+rolling on the floor laughing,🤣,4,2,0,2,positive,uncovered,,
+frowning face,☹,4,3,1,2,negative,NEG,0.1,0.7
+clapping hands,👏,4,3,1,2,positive,POS,0.625,0.104
+face screaming in fear,😱,4,2,0,2,negative,POS,0.454,0.264
+lovered,❤,4,2,2,0,positive,POS,0.79,0.044
+oncoming fist,👊,3,2,1,1,positive,POS,0.493,0.264
+face with steam from nose,😤,3,2,0,2,negative,NEG,0.269,0.48
+raising hands,🙌,3,1,1,0,positive,POS,0.661,0.101
+trophy,🏆,3,2,2,0,positive,POS,0.768,0.031
+grining face,😀,3,1,0,1,positive,POS,0.656,0.084
+person running,🏃,3,1,0,1,negative,POS,0.504,0.089
+glowing star,🌟,3,1,1,0,positive,POS,0.387,0.055
+persevering face,😣,2,1,0,1,negative,NEG,0.328,0.542
+pig nose,🐽,2,1,0,1,negative,NEU,0.364,0.227
+face with cold sweat,😓,2,1,0,1,negative,NEU,0.352,0.432
+hugging face,🤗,2,1,1,0,positive,uncovered,,
+high voltage,⚡,2,1,0,1,negative,POS,0.22,0.041
+disappointed face,😞,2,2,0,2,negative,NEU,0.361,0.479
+weary face,😩,2,1,0,1,negative,NEG,0.223,0.591
+lying face,🤥,2,1,0,1,negative,uncovered,,
+face with open mouth,😮,1,1,0,1,negative,POS,0.456,0.178
+angry face,😠,1,1,0,1,negative,NEG,0.264,0.566
+person bowing,🙇,1,1,0,1,negative,NEU,0.434,0.289
+expressionless face,😑,1,1,0,1,negative,NEG,0.201,0.515
+sign of the horns,🤘,1,1,1,0,positive,uncovered,,
+face savouring delicious food,😋,1,1,1,0,negative,POS,0.678,0.045
+kissing face with closed eyes,😚,1,1,1,0,positive,POS,0.762,0.047
+bomb,💣,1,1,0,1,negative,NEU,0.313,0.305
+broken heart,💔,1,1,0,1,negative,NEU,0.293,0.415
+speak-no-evil,🙊,1,1,0,1,negative,POS,0.594,0.134
+slightly frowning face,🙁,1,1,0,1,negative,uncovered,,
+pouting face,😡,1,1,0,1,negative,NEG,0.36,0.533
+confused face,😕,1,1,0,1,negative,NEG,0.203,0.603
+see-no-evil monkey,🙈,1,1,0,1,negative,POS,0.596,0.163
+heart with arrow,💘,1,1,1,0,positive,POS,0.734,0.046
+face without mouth,😶,1,1,0,1,negative,NEU,0.282,0.427
+person raising hand,🙋,1,1,0,1,positive,POS,0.619,0.127
+smiling face with open mouth & cold sweat,😅,1,1,0,1,positive,POS,0.472,0.292
+cat face with tears of joy,😹,1,1,1,0,positive,NEU,0.441,0.298

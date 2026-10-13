@@ -1,0 +1,58 @@
+{
+  "f1_variant": "f1_master_ours",
+  "b0_t1_gain": {
+    "negative": {
+      "n": 75,
+      "acc_a": 0.8533333333333334,
+      "acc_b": 0.8666666666666667,
+      "gain_pp": 1.3333333333333308,
+      "disc_a": 3,
+      "disc_b": 4,
+      "mcnemar_p": 1.0
+    },
+    "positive": {
+      "n": 90,
+      "acc_a": 0.7333333333333333,
+      "acc_b": 0.7888888888888889,
+      "gain_pp": 5.555555555555558,
+      "disc_a": 0,
+      "disc_b": 5,
+      "mcnemar_p": 0.0625
+    },
+    "ALL": {
+      "n": 165,
+      "gain_pp": 3.6363636363636362,
+      "disc_a": 3,
+      "disc_b": 9,
+      "mcnemar_p": 0.14599609375
+    }
+  },
+  "direction_of_change": {
+    "negative": {
+      "n": 75,
+      "no_flip": 68,
+      "neg->pos": 3,
+      "pos->neg": 4
+    },
+    "positive": {
+      "n": 90,
+      "no_flip": 85,
+      "neg->pos": 5,
+      "pos->neg": 0
+    }
+  },
+  "helped_hurt": {
+    "negative": {
+      "n": 75,
+      "helped": 4,
+      "hurt": 3,
+      "net": 1
+    },
+    "positive": {
+      "n": 90,
+      "helped": 5,
+      "hurt": 0,
+      "net": 5
+    }
+  }
+}

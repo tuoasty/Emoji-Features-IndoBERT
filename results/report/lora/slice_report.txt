@@ -1,0 +1,54 @@
+[lora] loaded predictions for conditions: ['b0', 'b1', 'f1_esr_ang', 'f1_esr_ours', 'f1_master_ang', 'f1_master_ours', 't1', 't1_neg', 't1_pos']
+
+=== ACCURACY by slice (mean +/- std over folds, seeds averaged within fold) ===
+condition                   whole      emoji-slice        non-emoji
+b0                 79.63 +/- 2.14   74.23 +/- 6.23   80.67 +/- 1.81
+b1                 79.67 +/- 2.06   74.90 +/- 6.01   80.59 +/- 1.65
+f1_esr_ang         80.67 +/- 2.67   80.15 +/- 6.14   80.78 +/- 2.22
+f1_esr_ours        80.67 +/- 2.67   79.25 +/- 6.52   81.01 +/- 1.88
+f1_master_ang      80.63 +/- 2.72   79.97 +/- 6.18   80.78 +/- 2.22
+f1_master_ours     80.15 +/- 2.60   78.61 +/- 6.69   80.43 +/- 2.05
+t1                 80.59 +/- 2.36   79.19 +/- 5.95   80.84 +/- 1.95
+t1_neg             81.04 +/- 2.15   81.93 +/- 5.64   80.66 +/- 2.04
+t1_pos             80.59 +/- 2.06   81.73 +/- 6.98   80.37 +/- 1.23
+
+=== SANITY: non-emoji drift vs retraining-noise baseline ===
+  within-condition between-seed flip (pure retrain noise, the null):
+    b0              :  166/2205 =   7.5%
+    b1              :  158/2205 =   7.2%
+    t1              :  140/2205 =   6.3%
+    f1_master_ours  :  154/2205 =   7.0%
+  cross-condition same-seed flip vs b0 (null=7.5%, threshold=9.4%):
+    b0 vs b1              :   80/2205 =   3.6%   [OK (within retrain noise)]
+    b0 vs t1              :   82/2205 =   3.7%   [OK (within retrain noise)]
+    b0 vs f1_master_ours  :  141/2205 =   6.4%   [OK (within retrain noise)]
+  OK: cross-condition non-emoji drift is within retraining noise; the emoji effect is confined to the slice, as claimed.
+
+=== PRIMARY: exact McNemar per tweet, EMOJI slice (majority vote over seeds) ===
+  B0 vs B1: n=165  discordant=7 (B0-only-right=3, B1-only-right=4)  net B1-B0=+1 tweets  exact p=1.0000  [ns]
+  B0 vs T1: n=165  discordant=13 (B0-only-right=4, T1-only-right=9)  net T1-B0=+5 tweets  exact p=0.2668  [ns]
+  B0 vs F1: n=165  discordant=17 (B0-only-right=6, F1-only-right=11)  net F1-B0=+5 tweets  exact p=0.3323  [ns]
+  B1 vs T1: n=165  discordant=8 (B1-only-right=2, T1-only-right=6)  net T1-B1=+4 tweets  exact p=0.2891  [ns]
+  B1 vs F1: n=165  discordant=12 (B1-only-right=4, F1-only-right=8)  net F1-B1=+4 tweets  exact p=0.3877  [ns]
+  T1 vs F1: n=165  discordant=6 (T1-only-right=3, F1-only-right=3)  net F1-T1=+0 tweets  exact p=1.0000  [ns]
+
+=== SECONDARY: paired t-test on EMOJI-slice fold-means (n=5, underpowered) ===
+  B0 vs B1: mean diff = +0.67pp  t=+0.61  p=0.5741  cohen_d=+0.27  (n=5 folds)  [ns]
+  B0 vs T1: mean diff = +4.96pp  t=+2.72  p=0.0532  cohen_d=+1.21  (n=5 folds)  [ns]
+  B0 vs F1: mean diff = +4.38pp  t=+1.93  p=0.1255  cohen_d=+0.86  (n=5 folds)  [ns]
+  B1 vs T1: mean diff = +4.29pp  t=+3.13  p=0.0352  cohen_d=+1.40  (n=5 folds)  [SIG]
+  B1 vs F1: mean diff = +3.72pp  t=+2.34  p=0.0794  cohen_d=+1.05  (n=5 folds)  [ns]
+  T1 vs F1: mean diff = -0.57pp  t=-0.95  p=0.3952  cohen_d=-0.43  (n=5 folds)  [ns]
+
+=== FAILURE / IMPACT CASES on emoji tweets (majority vote across seeds) ===
+  emoji tweets compared: 165  (F1 headline = f1_master_ours)
+  helped_by_t1  :   9
+  helped_by_f1  :  11
+  hurt_by_t1    :   4
+  hurt_by_f1    :   6
+  persistent    :  30
+  f1_over_t1    :   3
+  f1_under_t1   :   3
+  full case lists + tweet texts -> results/report/lora/failure_cases.json
+    (inspect 'hurt_by_f1' and 'persistent' for the failure taxonomy:
+     sarcasm / emoji-contradicts-text / mixed-polarity / uncovered-emoji)

@@ -1,0 +1,158 @@
+{
+  "negative only|negative": {
+    "n": 45,
+    "acc": {
+      "b0": 0.7777777777777778,
+      "t1": 0.7777777777777778,
+      "t1_pos": 0.8,
+      "t1_neg": 0.9555555555555556
+    },
+    "vs_b0": {
+      "t1": {
+        "helped": 1,
+        "hurt": 1,
+        "net": 0
+      },
+      "t1_pos": {
+        "helped": 1,
+        "hurt": 0,
+        "net": 1
+      },
+      "t1_neg": {
+        "helped": 8,
+        "hurt": 0,
+        "net": 8
+      }
+    }
+  },
+  "negative only|positive": {
+    "n": 2,
+    "acc": {
+      "b0": 0.0,
+      "t1": 0.0,
+      "t1_pos": 0.0,
+      "t1_neg": 0.0
+    },
+    "vs_b0": {
+      "t1": {
+        "helped": 0,
+        "hurt": 0,
+        "net": 0
+      },
+      "t1_pos": {
+        "helped": 0,
+        "hurt": 0,
+        "net": 0
+      },
+      "t1_neg": {
+        "helped": 0,
+        "hurt": 0,
+        "net": 0
+      }
+    }
+  },
+  "positive only|negative": {
+    "n": 13,
+    "acc": {
+      "b0": 0.9230769230769231,
+      "t1": 0.8461538461538461,
+      "t1_pos": 0.7692307692307693,
+      "t1_neg": 0.9230769230769231
+    },
+    "vs_b0": {
+      "t1": {
+        "helped": 0,
+        "hurt": 1,
+        "net": -1
+      },
+      "t1_pos": {
+        "helped": 0,
+        "hurt": 2,
+        "net": -2
+      },
+      "t1_neg": {
+        "helped": 0,
+        "hurt": 0,
+        "net": 0
+      }
+    }
+  },
+  "positive only|positive": {
+    "n": 83,
+    "acc": {
+      "b0": 0.7349397590361446,
+      "t1": 0.8072289156626506,
+      "t1_pos": 0.8795180722891566,
+      "t1_neg": 0.7831325301204819
+    },
+    "vs_b0": {
+      "t1": {
+        "helped": 7,
+        "hurt": 1,
+        "net": 6
+      },
+      "t1_pos": {
+        "helped": 13,
+        "hurt": 1,
+        "net": 12
+      },
+      "t1_neg": {
+        "helped": 4,
+        "hurt": 0,
+        "net": 4
+      }
+    }
+  },
+  "both|negative": {
+    "n": 17,
+    "acc": {
+      "b0": 0.8823529411764706,
+      "t1": 0.8235294117647058,
+      "t1_pos": 0.7058823529411765,
+      "t1_neg": 1.0
+    },
+    "vs_b0": {
+      "t1": {
+        "helped": 0,
+        "hurt": 1,
+        "net": -1
+      },
+      "t1_pos": {
+        "helped": 0,
+        "hurt": 3,
+        "net": -3
+      },
+      "t1_neg": {
+        "helped": 2,
+        "hurt": 0,
+        "net": 2
+      }
+    }
+  },
+  "both|positive": {
+    "n": 5,
+    "acc": {
+      "b0": 0.2,
+      "t1": 0.4,
+      "t1_pos": 0.6,
+      "t1_neg": 0.2
+    },
+    "vs_b0": {
+      "t1": {
+        "helped": 1,
+        "hurt": 0,
+        "net": 1
+      },
+      "t1_pos": {
+        "helped": 2,
+        "hurt": 0,
+        "net": 2
+      },
+      "t1_neg": {
+        "helped": 0,
+        "hurt": 0,
+        "net": 0
+      }
+    }
+  }
+}

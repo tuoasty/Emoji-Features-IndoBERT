@@ -1,0 +1,788 @@
+{
+  "f1_variant": "f1_master_ours",
+  "n_emoji_tweets": 165,
+  "categories": {
+    "helped_by_t1": [
+      {
+        "fold": 0,
+        "val_index": 144,
+        "text": "Suara #ahy bakal direbuntukan. Apakah pak @basuki_btp mau melanjuntukan program yang di usung pak @AgusYudhoyono sepertinya tidak .  <Expressionless Face>",
+        "b0": false,
+        "t1": true,
+        "f1": true
+      },
+      {
+        "fold": 0,
+        "val_index": 418,
+        "text": "tolong bapak gubernur knp sampai saat kjp anak saya tidak turun juga sudah hampir 4 bulan menjelang pilkada Dki sampai sekarang <Confused Face>",
+        "b0": false,
+        "t1": true,
+        "f1": true
+      },
+      {
+        "fold": 0,
+        "val_index": 592,
+        "text": "#AhokDjarot hasil kerja nyata,hasil kerja sudah banyak yang terselesaikan, gak pakai janji2 lagi,tinggal meneruskan yang lain  <Victory Hand> <FOLDED HANDS> <Fire>",
+        "b0": false,
+        "t1": true,
+        "f1": true
+      },
+      {
+        "fold": 1,
+        "val_index": 597,
+        "text": "#JakartaBersuriah ala ustad cang haris.. pilih #AhokDjarot <Victory Hand> jangan lupa No. 2 pilih yang islami asli berakhlaq dan sudah haji.. Haji Djarot",
+        "b0": false,
+        "t1": true,
+        "f1": true
+      },
+      {
+        "fold": 2,
+        "val_index": 426,
+        "text": "#AhokDjarot anti korup..kinerja kerja nyata.. Kebersihan Tata ruang kota.. Jakarta..makin baik?  <Weary Face>  <Weary Face>",
+        "b0": false,
+        "t1": true,
+        "f1": true
+      },
+      {
+        "fold": 2,
+        "val_index": 574,
+        "text": "Jangan lupa coblos pemimpin yang pekerja keras <Victory Hand> <Victory Hand> #AhokDjarot #AniesSandi #JakartaPunyaSemua",
+        "b0": false,
+        "t1": true,
+        "f1": true
+      },
+      {
+        "fold": 2,
+        "val_index": 866,
+        "text": "Doain daerah sendiri dulu aja, GUB nya bagaimana <FOLDED HANDS> Aa Gym Kritik Syukuran Anies-Sandi Usai Menang di Pilkada DKI https://today.line.me/",
+        "b0": false,
+        "t1": true,
+        "f1": true
+      },
+      {
+        "fold": 3,
+        "val_index": 113,
+        "text": "#DebatFinalPilkadaJKT AHY AHY Anda ngomong karakter.. Anda tau yang barusan Anda omongkan untuk melihat sisi negatif orang lain? <Tongue> <Oncoming Fist>",
+        "b0": false,
+        "t1": true,
+        "f1": true
+      },
+      {
+        "fold": 3,
+        "val_index": 143,
+        "text": "Ayo pendukung AHY Dukung penggembosmu <Tongue> <Fire> <Fire>",
+        "b0": false,
+        "t1": true,
+        "f1": true
+      },
+      {
+        "fold": 3,
+        "val_index": 572,
+        "text": "Banyak pemimpin agama yang baik. Tapi pelayan warga yang JUJUR, BERSIH dan KERJA NYATA, cuma <Victory Hand> <Victory Hand> @AhokDjarot #DebatPilkadaDKI",
+        "b0": false,
+        "t1": true,
+        "f1": true
+      },
+      {
+        "fold": 4,
+        "val_index": 280,
+        "text": "yang buat polling mbak, kami terbuka pemilih #AHY secara pribadi untuk bergabung, karena mbak bukan pengambil keputusan di timses <Smiling Face With Smiling Eyes>",
+        "b0": false,
+        "t1": true,
+        "f1": false
+      },
+      {
+        "fold": 4,
+        "val_index": 569,
+        "text": "Ahok-Djarot kalah dalam pilkada, tapi menang dalam menjaga integritas berdemokrasi Pancasila. Bangga! <SMILING FACE WITH HEART-EYES> #JakartaGubernurBaru #PilkadaDKI",
+        "b0": false,
+        "t1": true,
+        "f1": true
+      }
+    ],
+    "helped_by_f1": [
+      {
+        "fold": 0,
+        "val_index": 144,
+        "text": "Suara #ahy bakal direbuntukan. Apakah pak @basuki_btp mau melanjuntukan program yang di usung pak @AgusYudhoyono sepertinya tidak .  <Expressionless Face>",
+        "b0": false,
+        "t1": true,
+        "f1": true
+      },
+      {
+        "fold": 0,
+        "val_index": 418,
+        "text": "tolong bapak gubernur knp sampai saat kjp anak saya tidak turun juga sudah hampir 4 bulan menjelang pilkada Dki sampai sekarang <Confused Face>",
+        "b0": false,
+        "t1": true,
+        "f1": true
+      },
+      {
+        "fold": 0,
+        "val_index": 592,
+        "text": "#AhokDjarot hasil kerja nyata,hasil kerja sudah banyak yang terselesaikan, gak pakai janji2 lagi,tinggal meneruskan yang lain  <Victory Hand> <FOLDED HANDS> <Fire>",
+        "b0": false,
+        "t1": true,
+        "f1": true
+      },
+      {
+        "fold": 0,
+        "val_index": 890,
+        "text": "wiiih Aqua pun #OKEOCE pilih no 3  <OK HAND>  <OK HAND>  <OK HAND>",
+        "b0": false,
+        "t1": false,
+        "f1": true
+      },
+      {
+        "fold": 1,
+        "val_index": 594,
+        "text": "#KawalC6CoblosNo2 kawal #AhokDjarot #Putaran2Menang <Victory Hand> <Victory Hand>",
+        "b0": false,
+        "t1": false,
+        "f1": true
+      },
+      {
+        "fold": 1,
+        "val_index": 597,
+        "text": "#JakartaBersuriah ala ustad cang haris.. pilih #AhokDjarot <Victory Hand> jangan lupa No. 2 pilih yang islami asli berakhlaq dan sudah haji.. Haji Djarot",
+        "b0": false,
+        "t1": true,
+        "f1": true
+      },
+      {
+        "fold": 1,
+        "val_index": 868,
+        "text": "KPU Sudah Umumkan Hasil Pilkada DKI, Anies-Sandi Tetap Menang, Karangan Bunga Gak Ngaruh <Cat Face With Tears of Joy> https://goo.gl/fb/ASihdv",
+        "b0": false,
+        "t1": false,
+        "f1": true
+      },
+      {
+        "fold": 2,
+        "val_index": 426,
+        "text": "#AhokDjarot anti korup..kinerja kerja nyata.. Kebersihan Tata ruang kota.. Jakarta..makin baik?  <Weary Face>  <Weary Face>",
+        "b0": false,
+        "t1": true,
+        "f1": true
+      },
+      {
+        "fold": 2,
+        "val_index": 574,
+        "text": "Jangan lupa coblos pemimpin yang pekerja keras <Victory Hand> <Victory Hand> #AhokDjarot #AniesSandi #JakartaPunyaSemua",
+        "b0": false,
+        "t1": true,
+        "f1": true
+      },
+      {
+        "fold": 2,
+        "val_index": 581,
+        "text": "Marilah Kemari (@ahokdjarot  <Victory Hand> <Victory Hand>  disini) cover by Citra & Alain #ahokdjarot #basukidjarot @temanAhok @AhokShow",
+        "b0": false,
+        "t1": false,
+        "f1": true
+      },
+      {
+        "fold": 2,
+        "val_index": 866,
+        "text": "Doain daerah sendiri dulu aja, GUB nya bagaimana <FOLDED HANDS> Aa Gym Kritik Syukuran Anies-Sandi Usai Menang di Pilkada DKI https://today.line.me/",
+        "b0": false,
+        "t1": true,
+        "f1": true
+      },
+      {
+        "fold": 2,
+        "val_index": 875,
+        "text": "@KompasTV sayang #AniesSandy tidak datang, kalau datang pasti acaranya tambah keren <OK HAND> <OK HAND> #AhokDjarotDiRosi",
+        "b0": false,
+        "t1": false,
+        "f1": true
+      },
+      {
+        "fold": 3,
+        "val_index": 113,
+        "text": "#DebatFinalPilkadaJKT AHY AHY Anda ngomong karakter.. Anda tau yang barusan Anda omongkan untuk melihat sisi negatif orang lain? <Tongue> <Oncoming Fist>",
+        "b0": false,
+        "t1": true,
+        "f1": true
+      },
+      {
+        "fold": 3,
+        "val_index": 131,
+        "text": "#AHY,Cuitan Hati SBY,Cuitan SBY, jokowi, mantan, mantan terindah,Pilgub DKI 2017  <Tongue> <Tongue>",
+        "b0": false,
+        "t1": false,
+        "f1": true
+      },
+      {
+        "fold": 3,
+        "val_index": 143,
+        "text": "Ayo pendukung AHY Dukung penggembosmu <Tongue> <Fire> <Fire>",
+        "b0": false,
+        "t1": true,
+        "f1": true
+      },
+      {
+        "fold": 3,
+        "val_index": 572,
+        "text": "Banyak pemimpin agama yang baik. Tapi pelayan warga yang JUJUR, BERSIH dan KERJA NYATA, cuma <Victory Hand> <Victory Hand> @AhokDjarot #DebatPilkadaDKI",
+        "b0": false,
+        "t1": true,
+        "f1": true
+      },
+      {
+        "fold": 4,
+        "val_index": 130,
+        "text": "#AHY,humor,lagu, Kisah Sedih AHY di Balik Lagu Jatuh Bangun  <Frowning Face> <Frowning Face>",
+        "b0": false,
+        "t1": false,
+        "f1": true
+      },
+      {
+        "fold": 4,
+        "val_index": 419,
+        "text": "KAFIR Tetap HARAM pemimpin kafir. #PilkadaDKI #pilkadadki2017 #IslamRahmatanLilAlamin  <Fire> <Fire>  <Fire> <Fire>",
+        "b0": false,
+        "t1": false,
+        "f1": true
+      },
+      {
+        "fold": 4,
+        "val_index": 562,
+        "text": "Pak Anies sepertinya semakin banyak dapat respon negatif dari netizen.Makin emosi-an.AHY, tetap hafalan.Badja paling ok <Smiling Face With Sunglasses> <Smiling Face With Sunglasses> <Victory Hand>",
+        "b0": false,
+        "t1": false,
+        "f1": true
+      },
+      {
+        "fold": 4,
+        "val_index": 569,
+        "text": "Ahok-Djarot kalah dalam pilkada, tapi menang dalam menjaga integritas berdemokrasi Pancasila. Bangga! <SMILING FACE WITH HEART-EYES> #JakartaGubernurBaru #PilkadaDKI",
+        "b0": false,
+        "t1": true,
+        "f1": true
+      }
+    ],
+    "hurt_by_t1": [
+      {
+        "fold": 0,
+        "val_index": 267,
+        "text": "AHY Sylvi selalu menang dalam hati kami pendukungnya, dengan adanya AHYSylvi membuat panik dan ketar ketir luar biasa di kubu sana  <FOLDED HANDS> <FOLDED HANDS>",
+        "b0": true,
+        "t1": false,
+        "f1": true
+      },
+      {
+        "fold": 0,
+        "val_index": 283,
+        "text": "diberi nikmat bersyukur, diberi ujian bersabar.. selamat malam semuanya.. <Face Blowing a Kiss> <Face Blowing a Kiss>",
+        "b0": true,
+        "t1": false,
+        "f1": false
+      },
+      {
+        "fold": 0,
+        "val_index": 410,
+        "text": "Jangan sampai allah mengAzab kalian wahai orang2 muslim yang memilih pemimpin kafir <High Voltage> <High Voltage> #pilkadadki2017 #PilkadaDKI",
+        "b0": true,
+        "t1": false,
+        "f1": true
+      },
+      {
+        "fold": 2,
+        "val_index": 409,
+        "text": "Tidak akan diberi petunjuk orang-orang zalim. Tetap HARAM pemimpin kafir.  <Fire> <Fire> #PilkadaDKI #pilkadadki2017 #IslamRahmatanLilAlamin ",
+        "b0": true,
+        "t1": false,
+        "f1": false
+      },
+      {
+        "fold": 3,
+        "val_index": 262,
+        "text": "Wah.diam2 mereka jadi *tersepona dengan pesonanya  #AHY dan akhirnya.. #GagalFokus deh! <FACE WITH STUCK-OUT TOUNGES> #AyoAgusYudhoyono https://Twitter.com/ZaraZ",
+        "b0": true,
+        "t1": false,
+        "f1": false
+      },
+      {
+        "fold": 3,
+        "val_index": 570,
+        "text": "Kepada Pendukung #BaDja #AhokDjarot kita tidak usah terprovokasi dan jangan mengotori tangan2 kita dengan Hal2 yang mengandung NAZIS <Heavy Check Mark> <Heavy Check Mark>",
+        "b0": true,
+        "t1": false,
+        "f1": false
+      },
+      {
+        "fold": 3,
+        "val_index": 587,
+        "text": "jakarta tidak butuh gubernur yang pandai bermain kata2.. jakarta butuh gubernur yang bekerja nyata <Victory Hand> <Victory Hand>  #AhokDjarot",
+        "b0": true,
+        "t1": false,
+        "f1": true
+      },
+      {
+        "fold": 3,
+        "val_index": 598,
+        "text": "Di hari2 terakhir ini saya usul team pak @basuki_btp bergerak di #JAKARTATIMUR #AhokDjarot #Kami2 untuk sosialisasi ProgramKerja  <FOLDED HANDS> <FOLDED HANDS>",
+        "b0": true,
+        "t1": false,
+        "f1": true
+      },
+      {
+        "fold": 4,
+        "val_index": 110,
+        "text": "Mau nyoblos atau mau ke tempat berkabung. <Tongue> #Ahy memakai baju hitam2..atau lagi sedih <Smiling Face With Open Mouth & Smiling Eyes> #siapkalah di #Pilkadadki  @Metro_TV",
+        "b0": true,
+        "t1": false,
+        "f1": false
+      },
+      {
+        "fold": 4,
+        "val_index": 425,
+        "text": "Kalo bete ama M Taufik boleh pilih #AhokDjarot nggak kak? Soooo PASTIIII !!! <Face With Steam From Nose> <Face With Steam From Nose> <FACE WITH TEARS OF JOY> <Smiling Face With Open Mouth & Smiling Eyes> <FACE WITH TEARS OF JOY> <grining face with smile eye> <Victory Hand> #JanganTakutPilih2 #PilihBaDja",
+        "b0": true,
+        "t1": false,
+        "f1": false
+      },
+      {
+        "fold": 4,
+        "val_index": 708,
+        "text": "Kalo Ahok kalah, Anies-Sandi menang? Paling juga Jakarta akan seperti dulu lagi, saling rukun, koruptornya <grining face with smile eye> <grining face with smile eye> <Lying Face> <Lying Face> #PilkadaDKI",
+        "b0": true,
+        "t1": false,
+        "f1": false
+      }
+    ],
+    "hurt_by_f1": [
+      {
+        "fold": 0,
+        "val_index": 124,
+        "text": "Gara2 kemaren #AHY pake seragam hitam2 ??? <Thinking Face> <Thinking Face> <Thinking Face> <Smiling Face With Open Mouth & Closed Eyes> <Smiling Face With Sunglasses> https://twitter.com/NetizenTofa/status/841350678345736192 …",
+        "b0": true,
+        "t1": true,
+        "f1": false
+      },
+      {
+        "fold": 0,
+        "val_index": 283,
+        "text": "diberi nikmat bersyukur, diberi ujian bersabar.. selamat malam semuanya.. <Face Blowing a Kiss> <Face Blowing a Kiss>",
+        "b0": true,
+        "t1": false,
+        "f1": false
+      },
+      {
+        "fold": 2,
+        "val_index": 409,
+        "text": "Tidak akan diberi petunjuk orang-orang zalim. Tetap HARAM pemimpin kafir.  <Fire> <Fire> #PilkadaDKI #pilkadadki2017 #IslamRahmatanLilAlamin ",
+        "b0": true,
+        "t1": false,
+        "f1": false
+      },
+      {
+        "fold": 3,
+        "val_index": 262,
+        "text": "Wah.diam2 mereka jadi *tersepona dengan pesonanya  #AHY dan akhirnya.. #GagalFokus deh! <FACE WITH STUCK-OUT TOUNGES> #AyoAgusYudhoyono https://Twitter.com/ZaraZ",
+        "b0": true,
+        "t1": false,
+        "f1": false
+      },
+      {
+        "fold": 3,
+        "val_index": 570,
+        "text": "Kepada Pendukung #BaDja #AhokDjarot kita tidak usah terprovokasi dan jangan mengotori tangan2 kita dengan Hal2 yang mengandung NAZIS <Heavy Check Mark> <Heavy Check Mark>",
+        "b0": true,
+        "t1": false,
+        "f1": false
+      },
+      {
+        "fold": 4,
+        "val_index": 110,
+        "text": "Mau nyoblos atau mau ke tempat berkabung. <Tongue> #Ahy memakai baju hitam2..atau lagi sedih <Smiling Face With Open Mouth & Smiling Eyes> #siapkalah di #Pilkadadki  @Metro_TV",
+        "b0": true,
+        "t1": false,
+        "f1": false
+      },
+      {
+        "fold": 4,
+        "val_index": 425,
+        "text": "Kalo bete ama M Taufik boleh pilih #AhokDjarot nggak kak? Soooo PASTIIII !!! <Face With Steam From Nose> <Face With Steam From Nose> <FACE WITH TEARS OF JOY> <Smiling Face With Open Mouth & Smiling Eyes> <FACE WITH TEARS OF JOY> <grining face with smile eye> <Victory Hand> #JanganTakutPilih2 #PilihBaDja",
+        "b0": true,
+        "t1": false,
+        "f1": false
+      },
+      {
+        "fold": 4,
+        "val_index": 708,
+        "text": "Kalo Ahok kalah, Anies-Sandi menang? Paling juga Jakarta akan seperti dulu lagi, saling rukun, koruptornya <grining face with smile eye> <grining face with smile eye> <Lying Face> <Lying Face> #PilkadaDKI",
+        "b0": true,
+        "t1": false,
+        "f1": false
+      }
+    ],
+    "persistent": [
+      {
+        "fold": 0,
+        "val_index": 114,
+        "text": "AHY hanya membicarakan negatif saja untuk Jakarta, tidak ada solusi yang tepat untuk mengatasi nol besar. <Thumbs Down> #Debat1PilkadaDKI",
+        "b0": false,
+        "t1": false,
+        "f1": false
+      },
+      {
+        "fold": 0,
+        "val_index": 259,
+        "text": "Hayoo siapa aja yang sekarang sibuk hapus2in twit mereka sebelumnya, yang jelek2in #AHY?  <FACE WITH STUCK-OUT TOUNGES> <FACE WITH TEARS OF JOY> ",
+        "b0": false,
+        "t1": false,
+        "f1": false
+      },
+      {
+        "fold": 0,
+        "val_index": 561,
+        "text": "Kekalahan Ahok ini disengaja, biar bisa sepaket dengan AHY pada Pilpres nanti <FACE WITH STUCK-OUT TOUNGES> <grining face with smile eye> <grining face with smile eye> <Smiling Face With Sunglasses> <Smiling Face With Sunglasses> #PilkadaDKI. #Ahokers jangan risau hahahahahaha",
+        "b0": false,
+        "t1": false,
+        "f1": false
+      },
+      {
+        "fold": 1,
+        "val_index": 122,
+        "text": "2.mesti nyuruh mantan pemilih #AHY-#Sylvi buat pilih paslon #Anies-#Sandi !!! <Face With Open Mouth> <THUMBS UP> <OK HAND> <FOLDED HANDS> <Thinking Face> <Smiling Face With Sunglasses> https://twitter.com/RestySeterah/status",
+        "b0": false,
+        "t1": false,
+        "f1": false
+      },
+      {
+        "fold": 1,
+        "val_index": 255,
+        "text": "Waktu itu .... ah sudahlah <Frowning Face> @didienAZHAR: #AHY No. 1 <THUMBS UP> <THUMBS UP> <THUMBS UP>",
+        "b0": false,
+        "t1": false,
+        "f1": false
+      },
+      {
+        "fold": 1,
+        "val_index": 298,
+        "text": "Jangan kira skenario AHY cuma untuk menang Pilgub saja? AHY sudah pikirkan matang skenario jika kalah. Kalah pun dia menang sejatinya. <Smiling Face With Smiling Eyes> <Smiling Face With Smiling Eyes>",
+        "b0": false,
+        "t1": false,
+        "f1": false
+      },
+      {
+        "fold": 1,
+        "val_index": 560,
+        "text": "Bapak Presiden sudah bilang Pilkada DKI akan aman tohh  <Smiling Face With Sunglasses>  <Smiling Face With Sunglasses> ... #PilkadaDKI2017 @jokowi @JokowiAhokJKT",
+        "b0": false,
+        "t1": false,
+        "f1": false
+      },
+      {
+        "fold": 1,
+        "val_index": 725,
+        "text": "Dan nginulpun terdiam <Face Without Mouth> . #dacademy4 Salam #OkeOce, #CoblosPecinya",
+        "b0": false,
+        "t1": false,
+        "f1": false
+      },
+      {
+        "fold": 1,
+        "val_index": 881,
+        "text": "Hallo Bang @aniesbaswedan Wah Asyik juga ya habis manggung di DA  <THUMBS UP> <THUMBS UP> @IndosiarID #OkeOce #Telu",
+        "b0": false,
+        "t1": false,
+        "f1": false
+      },
+      {
+        "fold": 2,
+        "val_index": 286,
+        "text": "Saya juga dan tidak pernah nyesal dukung beliau <Face Blowing a Kiss> <Face Blowing a Kiss> malah bngga sekali kehadirannya di Republik ini #AHY",
+        "b0": false,
+        "t1": false,
+        "f1": false
+      },
+      {
+        "fold": 2,
+        "val_index": 407,
+        "text": "dulu #Jakarta tidak pernah terpecah belah, tapi sejak ada orang asing #jakarta terpecah <Broken Heart>  #AkuCoblosAniesSandi #pilkadadki2017 #PilkadaDK",
+        "b0": false,
+        "t1": false,
+        "f1": false
+      },
+      {
+        "fold": 2,
+        "val_index": 571,
+        "text": "Ingat kita pilih pelayan warga, bukan pemimpin agama di JKT. Pilih yang jelas BAIK, JUJUR dan BERSIH <Heavy Check Mark> <Heavy Check Mark> #AhokDjarot #debatpilkadadki",
+        "b0": false,
+        "t1": false,
+        "f1": false
+      },
+      {
+        "fold": 2,
+        "val_index": 577,
+        "text": "Haha..kerja nyata #AhokDjarot <Victory Hand> <Victory Hand>",
+        "b0": false,
+        "t1": false,
+        "f1": false
+      },
+      {
+        "fold": 2,
+        "val_index": 595,
+        "text": "Cuma ahok jarot yang bisa membereskan jakarta karena tahu apa yang dilakukan <FOLDED HANDS> <FOLDED HANDS> .Bukan calon yang cuma ngayal sama jualan kipas.",
+        "b0": false,
+        "t1": false,
+        "f1": false
+      },
+      {
+        "fold": 2,
+        "val_index": 873,
+        "text": "... Hahaha ... Adjrot Adjrot .... Ada ada aja ... Kehabisan akal ya untuk mengalahkan #AniesSandy kandidat favoritku <lovered>  <lovered>  ...",
+        "b0": false,
+        "t1": false,
+        "f1": false
+      },
+      {
+        "fold": 2,
+        "val_index": 883,
+        "text": "sedang nongkrong tiba2 didatangi timses paslon 3 #OkeOce  <OK HAND>",
+        "b0": false,
+        "t1": false,
+        "f1": false
+      },
+      {
+        "fold": 2,
+        "val_index": 889,
+        "text": "kita sih #OkeOCE aja <OK HAND>",
+        "b0": false,
+        "t1": false,
+        "f1": false
+      },
+      {
+        "fold": 3,
+        "val_index": 120,
+        "text": "#AHY AniesHilangYa.. #AhokDjarotDiRosi. <Grimacing Face> <Grimacing Face> @KompasTV @Rosianna766Hi @SittaYohag @gunawanahokers @gUNJKT_ @PartaiSocmed @ulinyusron",
+        "b0": false,
+        "t1": false,
+        "f1": false
+      },
+      {
+        "fold": 3,
+        "val_index": 129,
+        "text": "#ahy <Frowning Face>",
+        "b0": false,
+        "t1": false,
+        "f1": false
+      },
+      {
+        "fold": 3,
+        "val_index": 261,
+        "text": "Pingin lihat mas #AHY debat <FACE WITH STUCK-OUT TOUNGES> ",
+        "b0": false,
+        "t1": false,
+        "f1": false
+      },
+      {
+        "fold": 3,
+        "val_index": 448,
+        "text": "#AhokDjarot unggul dalam memainkan isu dan strategi. Apalagi dalam isu sara, serta matang dalam mengelola Strategi Musuh.  <FACE WITH STUCK-OUT TOUNGES>",
+        "b0": false,
+        "t1": false,
+        "f1": false
+      },
+      {
+        "fold": 3,
+        "val_index": 596,
+        "text": "Begini Program Ahok-Djarot <Victory Hand> <Victory Hand> Ajak Warga Bekerja Baca selengkapnya #Ahok #Ahokdjarot",
+        "b0": false,
+        "t1": false,
+        "f1": false
+      },
+      {
+        "fold": 3,
+        "val_index": 891,
+        "text": "Ada masalah dengan #kebhinnekaan ? Kayaknya nggak ada deh ! Kalau kita fokus #OkeOce insyaALLOH akan Oke-Oke aja  <OK HAND>",
+        "b0": false,
+        "t1": false,
+        "f1": false
+      },
+      {
+        "fold": 3,
+        "val_index": 895,
+        "text": "Kali saja bpk @aniesbaswedan @sandiuno lihat, lagi di RSpun tetap selfie #OkeOce  <OK HAND>  #DebatPilkadaDki #AhokPanikAhokKalah",
+        "b0": false,
+        "t1": false,
+        "f1": false
+      },
+      {
+        "fold": 4,
+        "val_index": 133,
+        "text": "Aku bangga jadi anak memo.  <Tongue>   <Face With Stuck-Out Tongue & Closed Eyes>  <FACE WITH TEARS OF JOY>    #AHY #moshing",
+        "b0": false,
+        "t1": false,
+        "f1": false
+      },
+      {
+        "fold": 4,
+        "val_index": 280,
+        "text": "yang buat polling mbak, kami terbuka pemilih #AHY secara pribadi untuk bergabung, karena mbak bukan pengambil keputusan di timses <Smiling Face With Smiling Eyes>",
+        "b0": false,
+        "t1": true,
+        "f1": false
+      },
+      {
+        "fold": 4,
+        "val_index": 565,
+        "text": "Bagi Tompi, Ahok-Djarot <Victory Hand> <Victory Hand> Lakukan Perubahan Positif, Nih Buktinya! #PilkadaDKI",
+        "b0": false,
+        "t1": false,
+        "f1": false
+      },
+      {
+        "fold": 4,
+        "val_index": 567,
+        "text": "Kalah karena jujur lebih baik daripada menang karena curang <Heavy Check Mark> <Heavy Check Mark>. Initerjadi di pilkada DKi.Makanya masih iri tidak terima sama Ahok",
+        "b0": false,
+        "t1": false,
+        "f1": false
+      },
+      {
+        "fold": 4,
+        "val_index": 580,
+        "text": "karena #AhokDjarot  <Victory Hand> <Victory Hand>  terbukti berkinerja bagus, bersih, anti korupsi & memperjuangkan keadilan",
+        "b0": false,
+        "t1": false,
+        "f1": false
+      },
+      {
+        "fold": 4,
+        "val_index": 864,
+        "text": "Bedanya hampir 17%..... artinya suara AHY ke ANIES-SANDI <Glowing Star> <Glowing Star> <Glowing Star>",
+        "b0": false,
+        "t1": false,
+        "f1": false
+      }
+    ],
+    "f1_over_t1": [
+      {
+        "fold": 0,
+        "val_index": 267,
+        "text": "AHY Sylvi selalu menang dalam hati kami pendukungnya, dengan adanya AHYSylvi membuat panik dan ketar ketir luar biasa di kubu sana  <FOLDED HANDS> <FOLDED HANDS>",
+        "b0": true,
+        "t1": false,
+        "f1": true
+      },
+      {
+        "fold": 0,
+        "val_index": 410,
+        "text": "Jangan sampai allah mengAzab kalian wahai orang2 muslim yang memilih pemimpin kafir <High Voltage> <High Voltage> #pilkadadki2017 #PilkadaDKI",
+        "b0": true,
+        "t1": false,
+        "f1": true
+      },
+      {
+        "fold": 0,
+        "val_index": 890,
+        "text": "wiiih Aqua pun #OKEOCE pilih no 3  <OK HAND>  <OK HAND>  <OK HAND>",
+        "b0": false,
+        "t1": false,
+        "f1": true
+      },
+      {
+        "fold": 1,
+        "val_index": 594,
+        "text": "#KawalC6CoblosNo2 kawal #AhokDjarot #Putaran2Menang <Victory Hand> <Victory Hand>",
+        "b0": false,
+        "t1": false,
+        "f1": true
+      },
+      {
+        "fold": 1,
+        "val_index": 868,
+        "text": "KPU Sudah Umumkan Hasil Pilkada DKI, Anies-Sandi Tetap Menang, Karangan Bunga Gak Ngaruh <Cat Face With Tears of Joy> https://goo.gl/fb/ASihdv",
+        "b0": false,
+        "t1": false,
+        "f1": true
+      },
+      {
+        "fold": 2,
+        "val_index": 581,
+        "text": "Marilah Kemari (@ahokdjarot  <Victory Hand> <Victory Hand>  disini) cover by Citra & Alain #ahokdjarot #basukidjarot @temanAhok @AhokShow",
+        "b0": false,
+        "t1": false,
+        "f1": true
+      },
+      {
+        "fold": 2,
+        "val_index": 875,
+        "text": "@KompasTV sayang #AniesSandy tidak datang, kalau datang pasti acaranya tambah keren <OK HAND> <OK HAND> #AhokDjarotDiRosi",
+        "b0": false,
+        "t1": false,
+        "f1": true
+      },
+      {
+        "fold": 3,
+        "val_index": 131,
+        "text": "#AHY,Cuitan Hati SBY,Cuitan SBY, jokowi, mantan, mantan terindah,Pilgub DKI 2017  <Tongue> <Tongue>",
+        "b0": false,
+        "t1": false,
+        "f1": true
+      },
+      {
+        "fold": 3,
+        "val_index": 587,
+        "text": "jakarta tidak butuh gubernur yang pandai bermain kata2.. jakarta butuh gubernur yang bekerja nyata <Victory Hand> <Victory Hand>  #AhokDjarot",
+        "b0": true,
+        "t1": false,
+        "f1": true
+      },
+      {
+        "fold": 3,
+        "val_index": 598,
+        "text": "Di hari2 terakhir ini saya usul team pak @basuki_btp bergerak di #JAKARTATIMUR #AhokDjarot #Kami2 untuk sosialisasi ProgramKerja  <FOLDED HANDS> <FOLDED HANDS>",
+        "b0": true,
+        "t1": false,
+        "f1": true
+      },
+      {
+        "fold": 4,
+        "val_index": 130,
+        "text": "#AHY,humor,lagu, Kisah Sedih AHY di Balik Lagu Jatuh Bangun  <Frowning Face> <Frowning Face>",
+        "b0": false,
+        "t1": false,
+        "f1": true
+      },
+      {
+        "fold": 4,
+        "val_index": 419,
+        "text": "KAFIR Tetap HARAM pemimpin kafir. #PilkadaDKI #pilkadadki2017 #IslamRahmatanLilAlamin  <Fire> <Fire>  <Fire> <Fire>",
+        "b0": false,
+        "t1": false,
+        "f1": true
+      },
+      {
+        "fold": 4,
+        "val_index": 562,
+        "text": "Pak Anies sepertinya semakin banyak dapat respon negatif dari netizen.Makin emosi-an.AHY, tetap hafalan.Badja paling ok <Smiling Face With Sunglasses> <Smiling Face With Sunglasses> <Victory Hand>",
+        "b0": false,
+        "t1": false,
+        "f1": true
+      }
+    ],
+    "f1_under_t1": [
+      {
+        "fold": 0,
+        "val_index": 124,
+        "text": "Gara2 kemaren #AHY pake seragam hitam2 ??? <Thinking Face> <Thinking Face> <Thinking Face> <Smiling Face With Open Mouth & Closed Eyes> <Smiling Face With Sunglasses> https://twitter.com/NetizenTofa/status/841350678345736192 …",
+        "b0": true,
+        "t1": true,
+        "f1": false
+      },
+      {
+        "fold": 4,
+        "val_index": 280,
+        "text": "yang buat polling mbak, kami terbuka pemilih #AHY secara pribadi untuk bergabung, karena mbak bukan pengambil keputusan di timses <Smiling Face With Smiling Eyes>",
+        "b0": false,
+        "t1": true,
+        "f1": false
+      }
+    ]
+  }
+}

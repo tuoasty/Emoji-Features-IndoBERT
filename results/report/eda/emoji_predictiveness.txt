@@ -1,0 +1,56 @@
+=== Per-emoji predictiveness + polarity asymmetry ===
+Corpus 2x2 base: 450 pos / 450 neg (base rate 0.500); 60 emoji types.
+MIN_TWEETS for highlighted analysis = 5. PMI+ vs base 0.5; Fisher exact 2x2.
+
+--- PER-EMOJI PREDICTIVENESS (tweets >= 5, 15 types) ---
+emojitag                                tw  g+  g-  P(pos)   PMI+ gold mstr  esr  Fish p  gap
+👌  ok hand                            26  23   3    0.88  +0.82  POS posi  POS   0.000  
+✌  victory hand                       25  23   2    0.92  +0.88  POS posi  POS   0.000  
+🙏  folded hands                       11  10   1    0.91  +0.86  POS posi  POS   0.011  
+😛  face with stuck-out tounges        11   4   7    0.36  -0.46  NEG nega  POS   0.546  <<
+😂  face with tears of joy              9   1   8    0.11  -2.17  NEG posi  POS   0.038  <<
+😊  smiling face with smiling eyes      9   8   1    0.89  +0.83  POS posi  POS   0.038  
+😎  smiling face with sunglasses        7   5   2    0.71  +0.51  POS posi  POS   0.451  
+😁  grining face with smile eye         7   2   5    0.29  -0.81  NEG posi  POS   0.451  <<
+👍  thumbs up                           6   4   2    0.67  +0.42  POS posi  POS   0.686  
+😝  face with stuck-out tongue & clos   6   0   6    0.00   -inf  NEG nega  POS   0.031  <<
+👅  tongue                              6   0   6    0.00   -inf  NEG nega  POS   0.031  <<
+🔥  fire                                5   1   4    0.20  -1.32  NEG nega  NEU   0.374  
+🤐  zipper-mouth face                   5   0   5    0.00   -inf  NEG nega unco   0.062  
+😘  face blowing a kiss                 5   5   0    1.00   +inf  POS posi  POS   0.062  
+😄  smiling face with open mouth & sm   5   1   4    0.20  -1.32  NEG posi  POS   0.374  <<
+
+--- Fisher p<0.05 among the 15 tested (DESCRIPTIVE — 15 tests, no correction; treat as flags) ---
+  ✌ victory hand                    gold=POS P(pos)=0.92 PMI+=+0.88 Fisher p=0.000
+  👌 ok hand                         gold=POS P(pos)=0.88 PMI+=+0.82 Fisher p=0.000
+  🙏 folded hands                    gold=POS P(pos)=0.91 PMI+=+0.86 Fisher p=0.011
+  😝 face with stuck-out tongue & c  gold=NEG P(pos)=0.00 PMI+=-inf Fisher p=0.031
+  👅 tongue                          gold=NEG P(pos)=0.00 PMI+=-inf Fisher p=0.031
+  😂 face with tears of joy          gold=NEG P(pos)=0.11 PMI+=-2.17 Fisher p=0.038
+  😊 smiling face with smiling eyes  gold=POS P(pos)=0.89 PMI+=+0.83 Fisher p=0.038
+
+--- VALENCE (ESR) vs STANCE (gold) GAP: ESR sign != gold skew (6 of 15) ---
+  (ESR reads emoji VALENCE; gold reflects deployed STANCE. Gap = the mocking/
+   mocking cluster; a lexicon feature imports valence, not stance.)
+  😝 face with stuck-out tongue & c  ESR=POS  master=nega -> gold NEG (P(pos)=0.00, n=6)
+  👅 tongue                          ESR=POS  master=nega -> gold NEG (P(pos)=0.00, n=6)
+  😂 face with tears of joy          ESR=POS  master=posi -> gold NEG (P(pos)=0.11, n=9)
+  😄 smiling face with open mouth &  ESR=POS  master=posi -> gold NEG (P(pos)=0.20, n=5)
+  😁 grining face with smile eye     ESR=POS  master=posi -> gold NEG (P(pos)=0.29, n=7)
+  😛 face with stuck-out tounges     ESR=POS  master=nega -> gold NEG (P(pos)=0.36, n=11)
+
+--- POLARITY ASYMMETRY: do POSITIVE-lexicon emoji predict pos as strongly as
+    NEGATIVE-lexicon emoji predict neg?  (grouped by ESR sign, tweets>=MIN) ---
+  [ESR] POS-lexicon emoji -> predict POSITIVE: 13 types, 133 tw; lexicon-sign matches gold 86/133=65%; mean P(pos)=0.65
+  [ESR] NEG-lexicon emoji -> predict NEGATIVE: n/a
+  [master] POS-lexicon emoji -> predict POSITIVE: 10 types, 110 tw; lexicon-sign matches gold 82/110=75%; mean P(pos)=0.75
+  [master] NEG-lexicon emoji -> predict NEGATIVE: 5 types, 33 tw; lexicon-sign matches gold 28/33=85%; mean P(pos)=0.15
+
+--- READ ---
+  * Positive-lexicon emoji predict pos-gold far more reliably than negative-lexicon
+    emoji predict neg-gold IFF the numbers above show it; the asymmetry
+    is stated from the % match, not assumed.
+  * The valence-stance GAP rows are positive-VALENCE emoji deployed with negative
+    STANCE, a candidate mechanism for the positive push (polarity_gain.py).
+  CAVEAT: per-emoji n tiny (mostly 5-11 tweets); 15 Fisher tests,
+    no multiple-comparison correction. Descriptive + effect size; do not over-test.

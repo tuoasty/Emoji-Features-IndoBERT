@@ -1,0 +1,22 @@
+=== Polarity mix [full]: harm by emoji polarity mix x gold (emoji slice, seed-majority) ===
+conditions present: ['b0', 't1']
+
+  Accuracy (%) per cell:
+    emoji mix      gold         n       b0       t1
+    negative only  negative    45    82.22    86.67
+    negative only  positive     2     0.00     0.00
+    positive only  negative    13    92.31    92.31
+    positive only  positive    83    77.11    83.13
+    both           negative    17    88.24    82.35
+    both           positive     5    40.00    40.00
+
+  B0 -> t1: helped / hurt / net per cell
+    emoji mix      gold         n  helped   hurt   net
+    negative only  negative    45       3      1    +2
+    negative only  positive     2       0      0    +0
+    positive only  negative    13       0      0    +0
+    positive only  positive    83       5      0    +5
+    both           negative    17       1      2    -1
+    both           positive     5       0      0    +0
+
+  CAVEAT: cells are small (some n < 20). Descriptive only.
