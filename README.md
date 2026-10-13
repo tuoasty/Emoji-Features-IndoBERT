@@ -82,3 +82,7 @@ Run all commands from the repository root. Training writes per-tweet predictions
 tweets that stay wrong under both B0 and T1+L (master, cont.) (`persistent`, 30) or
 that T1+L breaks (`hurt_by_f1`, 6). Its tweet set is the one in
 `lora/failure_cases.json`. It is the only result that cannot be regenerated from code.
+
+## License
+
+Code: MIT (see `LICENSE`). The dataset and the master emoji lexicon are not redistributed here; `data/download.py` fetches them from the rizalespe repository.
