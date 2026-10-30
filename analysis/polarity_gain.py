@@ -27,7 +27,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
-from src.models.indobert import TUNING_MODES  # noqa: E402
+from src.results_io import RUN_TAGS  # noqa: E402
 from src.results_io import load_runs, preds_dir, report_dir  # noqa: E402
 
 try:
@@ -161,7 +161,7 @@ def helped_hurt_by_polarity(lines, pt_b0, pt_t1):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--tuning", default="lora", choices=TUNING_MODES)
+    ap.add_argument("--tuning", default="lora", choices=RUN_TAGS)
     ap.add_argument("--b0", default="b0")
     ap.add_argument("--b1", default="b1")
     ap.add_argument("--t1", default="t1")

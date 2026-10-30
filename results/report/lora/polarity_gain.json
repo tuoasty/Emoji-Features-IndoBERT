@@ -3,8 +3,8 @@
   "b0_t1_gain": {
     "negative": {
       "n": 75,
-      "acc_a": 0.8266666666666667,
-      "acc_b": 0.8,
+      "acc_a": 0.84,
+      "acc_b": 0.8133333333333334,
       "gain_pp": -2.6666666666666616,
       "disc_a": 3,
       "disc_b": 1,
@@ -12,19 +12,19 @@
     },
     "positive": {
       "n": 90,
-      "acc_a": 0.6888888888888889,
-      "acc_b": 0.7666666666666667,
-      "gain_pp": 7.777777777777784,
-      "disc_a": 1,
+      "acc_a": 0.7,
+      "acc_b": 0.7555555555555555,
+      "gain_pp": 5.555555555555558,
+      "disc_a": 3,
       "disc_b": 8,
-      "mcnemar_p": 0.0390625
+      "mcnemar_p": 0.2265625
     },
     "ALL": {
       "n": 165,
-      "gain_pp": 3.0303030303030303,
-      "disc_a": 4,
+      "gain_pp": 1.8181818181818181,
+      "disc_a": 6,
       "disc_b": 9,
-      "mcnemar_p": 0.266845703125
+      "mcnemar_p": 0.6072387695312499
     }
   },
   "direction_of_change": {
@@ -36,9 +36,9 @@
     },
     "positive": {
       "n": 90,
-      "no_flip": 81,
+      "no_flip": 79,
       "neg->pos": 8,
-      "pos->neg": 1
+      "pos->neg": 3
     }
   },
   "helped_hurt": {
@@ -51,8 +51,8 @@
     "positive": {
       "n": 90,
       "helped": 8,
-      "hurt": 1,
-      "net": 7
+      "hurt": 3,
+      "net": 5
     }
   }
 }

@@ -19,7 +19,7 @@ import sys
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 from slice_report import correctness_by_tweet, fold_means, mcnemar_exact_p  # noqa: E402
-from src.models.indobert import TUNING_MODES  # noqa: E402
+from src.results_io import RUN_TAGS  # noqa: E402
 from src.results_io import load_runs, preds_dir, report_dir  # noqa: E402
 
 CONDITIONS = ("t1", "t1_pos", "t1_neg")
@@ -27,7 +27,7 @@ CONDITIONS = ("t1", "t1_pos", "t1_neg")
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--tuning", default="lora", choices=TUNING_MODES)
+    ap.add_argument("--tuning", default="lora", choices=RUN_TAGS)
     args = ap.parse_args()
 
     runs = load_runs(args.tuning)

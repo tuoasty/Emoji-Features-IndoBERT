@@ -27,7 +27,7 @@ import json
 import os
 import statistics as st
 
-from src.models.indobert import TUNING_MODES
+from src.results_io import RUN_TAGS
 from src.results_io import load_runs, preds_dir, report_dir
 
 try:
@@ -300,7 +300,7 @@ def failure_cases(runs, b0, t1, f1, out_dir, out_name="failure_cases.json"):
 
 def main():
     p = argparse.ArgumentParser()
-    p.add_argument("--tuning", default="lora", choices=TUNING_MODES)
+    p.add_argument("--tuning", default="lora", choices=RUN_TAGS)
     p.add_argument("--b0", default="b0")
     p.add_argument("--b1", default="b1")
     p.add_argument("--t1", default="t1")

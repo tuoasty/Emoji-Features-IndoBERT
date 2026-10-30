@@ -38,6 +38,7 @@ ESR_STYLE = {
 
 plt.rcParams.update({
     "font.size": 10, "font.family": "DejaVu Sans",
+    "pdf.fonttype": 42, "ps.fonttype": 42,  # TrueType, not Type 3 (EDAS/IEEE reject Type 3)
     "axes.edgecolor": "#cccccc", "axes.linewidth": 0.8,
     "text.color": INK, "axes.labelcolor": INK,
     "xtick.color": MUTED, "ytick.color": INK,

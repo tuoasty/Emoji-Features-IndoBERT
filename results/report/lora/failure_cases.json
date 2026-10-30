@@ -13,16 +13,16 @@
       },
       {
         "fold": 0,
-        "val_index": 592,
-        "text": "#AhokDjarot hasil kerja nyata,hasil kerja sudah banyak yang terselesaikan, gak pakai janji2 lagi,tinggal meneruskan yang lain  <Victory Hand> <FOLDED HANDS> <Fire>",
+        "val_index": 890,
+        "text": "wiiih Aqua pun #OKEOCE pilih no 3  <OK HAND>  <OK HAND>  <OK HAND>",
         "b0": false,
         "t1": true,
         "f1": true
       },
       {
-        "fold": 0,
-        "val_index": 890,
-        "text": "wiiih Aqua pun #OKEOCE pilih no 3  <OK HAND>  <OK HAND>  <OK HAND>",
+        "fold": 1,
+        "val_index": 255,
+        "text": "Waktu itu .... ah sudahlah <Frowning Face> @didienAZHAR: #AHY No. 1 <THUMBS UP> <THUMBS UP> <THUMBS UP>",
         "b0": false,
         "t1": true,
         "f1": true
@@ -34,6 +34,14 @@
         "b0": false,
         "t1": true,
         "f1": true
+      },
+      {
+        "fold": 1,
+        "val_index": 868,
+        "text": "KPU Sudah Umumkan Hasil Pilkada DKI, Anies-Sandi Tetap Menang, Karangan Bunga Gak Ngaruh <Cat Face With Tears of Joy> https://goo.gl/fb/ASihdv",
+        "b0": false,
+        "t1": true,
+        "f1": false
       },
       {
         "fold": 2,
@@ -61,14 +69,6 @@
       },
       {
         "fold": 4,
-        "val_index": 563,
-        "text": "Kekalahan Basuki Tjahaja Purnama-Djarot Saiful Hidayat di Pilkada DKI Jakarta tidak mempengaruhi elektabilitas PDI <Victory Hand>",
-        "b0": false,
-        "t1": true,
-        "f1": false
-      },
-      {
-        "fold": 4,
         "val_index": 565,
         "text": "Bagi Tompi, Ahok-Djarot <Victory Hand> <Victory Hand> Lakukan Perubahan Positif, Nih Buktinya! #PilkadaDKI",
         "b0": false,
@@ -87,14 +87,6 @@
       },
       {
         "fold": 0,
-        "val_index": 592,
-        "text": "#AhokDjarot hasil kerja nyata,hasil kerja sudah banyak yang terselesaikan, gak pakai janji2 lagi,tinggal meneruskan yang lain  <Victory Hand> <FOLDED HANDS> <Fire>",
-        "b0": false,
-        "t1": true,
-        "f1": true
-      },
-      {
-        "fold": 0,
         "val_index": 890,
         "text": "wiiih Aqua pun #OKEOCE pilih no 3  <OK HAND>  <OK HAND>  <OK HAND>",
         "b0": false,
@@ -106,7 +98,7 @@
         "val_index": 255,
         "text": "Waktu itu .... ah sudahlah <Frowning Face> @didienAZHAR: #AHY No. 1 <THUMBS UP> <THUMBS UP> <THUMBS UP>",
         "b0": false,
-        "t1": false,
+        "t1": true,
         "f1": true
       },
       {
@@ -123,14 +115,6 @@
         "text": "dulu #Jakarta tidak pernah terpecah belah, tapi sejak ada orang asing #jakarta terpecah <Broken Heart>  #AkuCoblosAniesSandi #pilkadadki2017 #PilkadaDK",
         "b0": false,
         "t1": true,
-        "f1": true
-      },
-      {
-        "fold": 2,
-        "val_index": 873,
-        "text": "... Hahaha ... Adjrot Adjrot .... Ada ada aja ... Kehabisan akal ya untuk mengalahkan #AniesSandy kandidat favoritku <lovered>  <lovered>  ...",
-        "b0": false,
-        "t1": false,
         "f1": true
       },
       {
@@ -159,6 +143,14 @@
       },
       {
         "fold": 4,
+        "val_index": 563,
+        "text": "Kekalahan Basuki Tjahaja Purnama-Djarot Saiful Hidayat di Pilkada DKI Jakarta tidak mempengaruhi elektabilitas PDI <Victory Hand>",
+        "b0": false,
+        "t1": false,
+        "f1": true
+      },
+      {
+        "fold": 4,
         "val_index": 565,
         "text": "Bagi Tompi, Ahok-Djarot <Victory Hand> <Victory Hand> Lakukan Perubahan Positif, Nih Buktinya! #PilkadaDKI",
         "b0": false,
@@ -176,20 +168,36 @@
         "f1": false
       },
       {
+        "fold": 1,
+        "val_index": 881,
+        "text": "Hallo Bang @aniesbaswedan Wah Asyik juga ya habis manggung di DA  <THUMBS UP> <THUMBS UP> @IndosiarID #OkeOce #Telu",
+        "b0": true,
+        "t1": false,
+        "f1": true
+      },
+      {
         "fold": 2,
         "val_index": 286,
         "text": "Saya juga dan tidak pernah nyesal dukung beliau <Face Blowing a Kiss> <Face Blowing a Kiss> malah bngga sekali kehadirannya di Republik ini #AHY",
+        "b0": true,
+        "t1": false,
+        "f1": true
+      },
+      {
+        "fold": 4,
+        "val_index": 130,
+        "text": "#AHY,humor,lagu, Kisah Sedih AHY di Balik Lagu Jatuh Bangun  <Frowning Face> <Frowning Face>",
         "b0": true,
         "t1": false,
         "f1": false
       },
       {
         "fold": 4,
-        "val_index": 706,
-        "text": "Apa yang dilakukan anies sandi setelah menang pilkada DKI? mungkin lagi blusukan memakai heli ke ujung kulon atau papua <grining face with smile eye>",
+        "val_index": 569,
+        "text": "Ahok-Djarot kalah dalam pilkada, tapi menang dalam menjaga integritas berdemokrasi Pancasila. Bangga! <SMILING FACE WITH HEART-EYES> #JakartaGubernurBaru #PilkadaDKI",
         "b0": true,
         "t1": false,
-        "f1": false
+        "f1": true
       },
       {
         "fold": 4,
@@ -203,14 +211,6 @@
     "hurt_by_f1": [
       {
         "fold": 1,
-        "val_index": 122,
-        "text": "2.mesti nyuruh mantan pemilih #AHY-#Sylvi buat pilih paslon #Anies-#Sandi !!! <Face With Open Mouth> <THUMBS UP> <OK HAND> <FOLDED HANDS> <Thinking Face> <Smiling Face With Sunglasses> https://twitter.com/RestySeterah/status",
-        "b0": true,
-        "t1": true,
-        "f1": false
-      },
-      {
-        "fold": 1,
         "val_index": 725,
         "text": "Dan nginulpun terdiam <Face Without Mouth> . #dacademy4 Salam #OkeOce, #CoblosPecinya",
         "b0": true,
@@ -219,24 +219,16 @@
       },
       {
         "fold": 2,
-        "val_index": 286,
-        "text": "Saya juga dan tidak pernah nyesal dukung beliau <Face Blowing a Kiss> <Face Blowing a Kiss> malah bngga sekali kehadirannya di Republik ini #AHY",
-        "b0": true,
-        "t1": false,
-        "f1": false
-      },
-      {
-        "fold": 4,
-        "val_index": 106,
-        "text": "AHY bisa kok menang pilgub DKI, bisa.... Asal ngumpulin dulu 7 bola dragon ball <Rolling on the Floor Laughing> <Rolling on the Floor Laughing> #QuickCount #PilkadaDKI",
+        "val_index": 127,
+        "text": "@ZaraZettiraZZ @NetizenTofa @ndoro__putri ada ahoker masih ngebully program #AHY <FACE WITH TEARS OF JOY> <FACE WITH TEARS OF JOY> <FACE WITH TEARS OF JOY>",
         "b0": true,
         "t1": true,
         "f1": false
       },
       {
         "fold": 4,
-        "val_index": 706,
-        "text": "Apa yang dilakukan anies sandi setelah menang pilkada DKI? mungkin lagi blusukan memakai heli ke ujung kulon atau papua <grining face with smile eye>",
+        "val_index": 130,
+        "text": "#AHY,humor,lagu, Kisah Sedih AHY di Balik Lagu Jatuh Bangun  <Frowning Face> <Frowning Face>",
         "b0": true,
         "t1": false,
         "f1": false
@@ -277,6 +269,14 @@
       },
       {
         "fold": 0,
+        "val_index": 592,
+        "text": "#AhokDjarot hasil kerja nyata,hasil kerja sudah banyak yang terselesaikan, gak pakai janji2 lagi,tinggal meneruskan yang lain  <Victory Hand> <FOLDED HANDS> <Fire>",
+        "b0": false,
+        "t1": false,
+        "f1": false
+      },
+      {
+        "fold": 0,
         "val_index": 877,
         "text": "... Ahok dan Najwa bener bener mati kutu dan bingung ... #Anies menjawab semua tudingan dengan ringan dan tepat  <SMILING FACE WITH HEART-EYES> <SMILING FACE WITH HEART-EYES>  ... #AniesSandy",
         "b0": false,
@@ -304,15 +304,7 @@
         "val_index": 868,
         "text": "KPU Sudah Umumkan Hasil Pilkada DKI, Anies-Sandi Tetap Menang, Karangan Bunga Gak Ngaruh <Cat Face With Tears of Joy> https://goo.gl/fb/ASihdv",
         "b0": false,
-        "t1": false,
-        "f1": false
-      },
-      {
-        "fold": 1,
-        "val_index": 881,
-        "text": "Hallo Bang @aniesbaswedan Wah Asyik juga ya habis manggung di DA  <THUMBS UP> <THUMBS UP> @IndosiarID #OkeOce #Telu",
-        "b0": false,
-        "t1": false,
+        "t1": true,
         "f1": false
       },
       {
@@ -327,6 +319,14 @@
         "fold": 2,
         "val_index": 595,
         "text": "Cuma ahok jarot yang bisa membereskan jakarta karena tahu apa yang dilakukan <FOLDED HANDS> <FOLDED HANDS> .Bukan calon yang cuma ngayal sama jualan kipas.",
+        "b0": false,
+        "t1": false,
+        "f1": false
+      },
+      {
+        "fold": 2,
+        "val_index": 873,
+        "text": "... Hahaha ... Adjrot Adjrot .... Ada ada aja ... Kehabisan akal ya untuk mengalahkan #AniesSandy kandidat favoritku <lovered>  <lovered>  ...",
         "b0": false,
         "t1": false,
         "f1": false
@@ -437,14 +437,6 @@
       },
       {
         "fold": 4,
-        "val_index": 130,
-        "text": "#AHY,humor,lagu, Kisah Sedih AHY di Balik Lagu Jatuh Bangun  <Frowning Face> <Frowning Face>",
-        "b0": false,
-        "t1": false,
-        "f1": false
-      },
-      {
-        "fold": 4,
         "val_index": 132,
         "text": "Owalah, kasihan kamu, Dik. Semoga kamu tidak jadi orang miskin, ya. Aamiin <THUMBS UP>  #AHY selalu dihati  <Tongue> ",
         "b0": false,
@@ -469,14 +461,6 @@
       },
       {
         "fold": 4,
-        "val_index": 563,
-        "text": "Kekalahan Basuki Tjahaja Purnama-Djarot Saiful Hidayat di Pilkada DKI Jakarta tidak mempengaruhi elektabilitas PDI <Victory Hand>",
-        "b0": false,
-        "t1": true,
-        "f1": false
-      },
-      {
-        "fold": 4,
         "val_index": 567,
         "text": "Kalah karena jujur lebih baik daripada menang karena curang <Heavy Check Mark> <Heavy Check Mark>. Initerjadi di pilkada DKi.Makanya masih iri tidak terima sama Ahok",
         "b0": false,
@@ -495,17 +479,17 @@
     "f1_over_t1": [
       {
         "fold": 1,
-        "val_index": 255,
-        "text": "Waktu itu .... ah sudahlah <Frowning Face> @didienAZHAR: #AHY No. 1 <THUMBS UP> <THUMBS UP> <THUMBS UP>",
-        "b0": false,
+        "val_index": 881,
+        "text": "Hallo Bang @aniesbaswedan Wah Asyik juga ya habis manggung di DA  <THUMBS UP> <THUMBS UP> @IndosiarID #OkeOce #Telu",
+        "b0": true,
         "t1": false,
         "f1": true
       },
       {
         "fold": 2,
-        "val_index": 873,
-        "text": "... Hahaha ... Adjrot Adjrot .... Ada ada aja ... Kehabisan akal ya untuk mengalahkan #AniesSandy kandidat favoritku <lovered>  <lovered>  ...",
-        "b0": false,
+        "val_index": 286,
+        "text": "Saya juga dan tidak pernah nyesal dukung beliau <Face Blowing a Kiss> <Face Blowing a Kiss> malah bngga sekali kehadirannya di Republik ini #AHY",
+        "b0": true,
         "t1": false,
         "f1": true
       },
@@ -516,30 +500,38 @@
         "b0": false,
         "t1": false,
         "f1": true
-      }
-    ],
-    "f1_under_t1": [
-      {
-        "fold": 1,
-        "val_index": 122,
-        "text": "2.mesti nyuruh mantan pemilih #AHY-#Sylvi buat pilih paslon #Anies-#Sandi !!! <Face With Open Mouth> <THUMBS UP> <OK HAND> <FOLDED HANDS> <Thinking Face> <Smiling Face With Sunglasses> https://twitter.com/RestySeterah/status",
-        "b0": true,
-        "t1": true,
-        "f1": false
-      },
-      {
-        "fold": 4,
-        "val_index": 106,
-        "text": "AHY bisa kok menang pilgub DKI, bisa.... Asal ngumpulin dulu 7 bola dragon ball <Rolling on the Floor Laughing> <Rolling on the Floor Laughing> #QuickCount #PilkadaDKI",
-        "b0": true,
-        "t1": true,
-        "f1": false
       },
       {
         "fold": 4,
         "val_index": 563,
         "text": "Kekalahan Basuki Tjahaja Purnama-Djarot Saiful Hidayat di Pilkada DKI Jakarta tidak mempengaruhi elektabilitas PDI <Victory Hand>",
         "b0": false,
+        "t1": false,
+        "f1": true
+      },
+      {
+        "fold": 4,
+        "val_index": 569,
+        "text": "Ahok-Djarot kalah dalam pilkada, tapi menang dalam menjaga integritas berdemokrasi Pancasila. Bangga! <SMILING FACE WITH HEART-EYES> #JakartaGubernurBaru #PilkadaDKI",
+        "b0": true,
+        "t1": false,
+        "f1": true
+      }
+    ],
+    "f1_under_t1": [
+      {
+        "fold": 1,
+        "val_index": 868,
+        "text": "KPU Sudah Umumkan Hasil Pilkada DKI, Anies-Sandi Tetap Menang, Karangan Bunga Gak Ngaruh <Cat Face With Tears of Joy> https://goo.gl/fb/ASihdv",
+        "b0": false,
+        "t1": true,
+        "f1": false
+      },
+      {
+        "fold": 2,
+        "val_index": 127,
+        "text": "@ZaraZettiraZZ @NetizenTofa @ndoro__putri ada ahoker masih ngebully program #AHY <FACE WITH TEARS OF JOY> <FACE WITH TEARS OF JOY> <FACE WITH TEARS OF JOY>",
+        "b0": true,
         "t1": true,
         "f1": false
       }

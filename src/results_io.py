@@ -10,6 +10,15 @@ import os
 RESULTS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "results")
 
 
+def run_tag(tuning: str, backbone: str = "indobert") -> str:
+    """Results folder name: the tuning mode for IndoBERT, <backbone>_<tuning> otherwise."""
+    return tuning if backbone == "indobert" else f"{backbone}_{tuning}"
+
+
+# Every results folder the report scripts accept as --tuning.
+RUN_TAGS = ("frozen", "lora", "full", "indobertweet_lora")
+
+
 def preds_dir(tuning: str) -> str:
     return os.path.normpath(os.path.join(RESULTS_DIR, "preds", tuning))
 

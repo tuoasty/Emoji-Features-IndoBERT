@@ -22,7 +22,7 @@ import sys
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 from slice_report import correctness_by_tweet, mcnemar_exact_p  # noqa: E402
 from src.dataset import F1_CONDITIONS, _load_raw  # noqa: E402
-from src.models.indobert import TUNING_MODES  # noqa: E402
+from src.results_io import RUN_TAGS  # noqa: E402
 from src.preprocess import extract_emoji_feature  # noqa: E402
 from src.results_io import load_runs, preds_dir, report_dir  # noqa: E402
 
@@ -58,7 +58,7 @@ def presence_feature_diff():
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--tuning", default="lora", choices=TUNING_MODES)
+    ap.add_argument("--tuning", default="lora", choices=RUN_TAGS)
     args = ap.parse_args()
 
     runs = load_runs(args.tuning)

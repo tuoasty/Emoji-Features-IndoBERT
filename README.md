@@ -38,6 +38,22 @@ with one of three tuning modes: a frozen encoder with only the head trained
 (`--tuning full`, lr 2e-5). All results in the paper use LoRA except the tuning
 comparison.
 
+**Checkpoint selection.** The test fold is never used to pick the epoch. 10% of each
+training fold (72 tweets, stratified by label and emoji presence, seed 0; `DEV_FRAC`
+and `DEV_SEED` in `src/dataset.py`) is held out as a development split, the same for
+every condition and seed. Each run keeps the epoch with the best development macro-F1
+(ties: lower development loss, then the earlier epoch), and its test fold is scored
+once, at that epoch.
+
+**Classifier heads.** The text-only and fusion heads use the same dropout on the
+pooled vector and the same initialization, so T1 and T1+L differ only in the feature.
+
+**Backbones.** `--backbone indobert` (default, `indobenchmark/indobert-base-p1`) or
+`--backbone indobertweet` (`indolem/indobertweet-base-uncased`). For IndoBERTweet each
+tag is rewritten in the colon form it saw in pretraining (`<OK HAND>` → `:ok_hand:`),
+and its untrained pooler is trained with the LoRA adapters. Its results go to
+`results/*/indobertweet_lora/`.
+
 ## Reproduce
 
 ```bash
@@ -52,18 +68,33 @@ python slice_eval.py --tuning frozen                          # 7 paper conditio
 python slice_eval.py --tuning lora                            # same, LoRA
 python slice_eval.py --tuning full                            # same, full fine-tuning
 python slice_eval.py --tuning lora --conditions t1_pos t1_neg
+python slice_eval.py --backbone indobertweet --tuning lora --conditions b0 t1 f1_master_ours
 
 # tables -> results/report/
 python compare_tuning.py                         # frozen vs LoRA vs full fine-tuning
 python slice_report.py --tuning lora             # accuracy by slice, McNemar, failure cases
+python slice_report.py --tuning indobertweet_lora
 python analysis/fusion_mcnemar.py --tuning lora  # T1 vs the T1+L conditions, presence vs continuous
 python analysis/polarity_gain.py --tuning lora   # gain by gold polarity
-python analysis/polarity_mix.py --tuning lora    # harm by emoji polarity mix
 python analysis/polarity_filter.py --tuning lora # T1 vs T1-pos / T1-neg against B0
+python analysis/revision_stats.py --tuning lora  # RQ3 Fisher tests, direction of changed predictions
+python analysis/revision2_stats.py --tuning lora # metrics, bootstrap CIs, Holm, power
+python analysis/revision2_stats.py --tuning indobertweet_lora
+python analysis/revision2_stats.py --tuning full
+python analysis/rq4_set.py --tuning lora         # RQ4 tweet set and blank annotation sheets
 ```
 
 Run all commands from the repository root. Training writes per-tweet predictions to
 `results/preds/`, which is not shipped; every report below is shipped.
+
+## Statistics
+
+Contrasts are tested per tweet with the exact McNemar test on the 165 emoji-bearing
+tweets, using each tweet's majority prediction over the three seeds. Two contrasts are
+primary, B0 vs T1 (RQ1) and T1 vs T1+L (master, cont.) (RQ2), Holm-corrected within
+each backbone; every other test is exploratory and uncorrected. Primary contrasts get a
+paired bootstrap 95% CI (10,000 resamples of tweets), and the McNemar power at n = 165
+is computed at the observed discordant rate. All of this is in `revision2_stats.txt`.
 
 ## Where each paper result comes from
 
@@ -71,17 +102,28 @@ Run all commands from the repository root. Training writes per-tweet predictions
 |---|---|
 | §III Data and EDA (counts, usage by type and use) | `eda/eda_summary.txt`, `eda/eda_emoji_table.csv` |
 | §III-D per-emoji predictiveness, Fig. 1 | `eda/emoji_predictiveness.txt`, `eda/eda_fig2_per_emoji_gold.pdf` |
-| §IV-D LoRA vs frozen vs full fine-tuning | `compare_tuning.txt` (detail in `frozen/`, `full/`) |
-| Table II, RQ1 (dilution, B0/B1/T1 McNemar) | `lora/slice_report.txt` |
+| §IV-D LoRA vs frozen vs full fine-tuning | `compare_tuning.txt` |
+| §V-A full fine-tuning: RQ1 gain does not replicate | `full/revision2_stats.txt` |
+| Table II upper block, RQ1 (dilution, McNemar) | `lora/slice_report.txt` |
+| RQ1/RQ2 per-tweet differences, 95% CIs, Holm p, power | `lora/revision2_stats.txt` |
+| Table II lower block, IndoBERTweet | `indobertweet_lora/slice_report.txt`, `indobertweet_lora/revision2_stats.txt` |
 | RQ1 raw emoji map to `[UNK]` | `eda/tokenizer_check.txt` |
-| RQ2 (lexicon feature vs tag-text) | `lora/mcnemar_fusion.txt` |
-| RQ3 (gain by gold polarity, T1-pos) | `lora/polarity_gain.txt`, `lora/polarity_mix.txt` |
-| RQ4 (error taxonomy) | `lora/failure_cases.json`, `lora/error_taxonomy.csv` |
+| Table III, RQ2 (lexicon feature vs tag-text) | `lora/mcnemar_fusion.txt` |
+| Table IV, metrics and confusion counts on emoji-bearing tweets | `lora/revision2_stats.txt` |
+| Table V, RQ3 (gain by gold polarity) | `lora/polarity_gain.txt`, `lora/revision_stats.txt` |
+| RQ3 T1-pos diagnostic | `lora/mcnemar_polarity_filter.txt` |
+| Table VI, RQ4 (error taxonomy) | `lora/rq4_final.csv`, `lora/rq4_annotator_{1,2,3}.csv`, `lora/failure_cases.json` |
 
-`lora/error_taxonomy.csv` holds the hand labels (one annotator) for the 36 emoji-bearing
-tweets that stay wrong under both B0 and T1+L (master, cont.) (`persistent`, 30) or
-that T1+L breaks (`hurt_by_f1`, 6). Its tweet set is the one in
-`lora/failure_cases.json`. It is the only result that cannot be regenerated from code.
+`lora/rq4_final.csv` holds the hand labels for the 33 emoji-bearing tweets that stay
+wrong under both B0 and T1+L (master, cont.) (`persistent`, 29) or that T1+L breaks
+(`broken`, 4). Each tweet was labeled independently by three annotators from a written
+guide, seeing the tweet, its gold label and the wrong prediction but not the condition;
+each label is the majority of the three. Each annotator's own labels are in
+`lora/rq4_annotator_1.csv`, `_2.csv` and `_3.csv` (same tweets and columns), from which
+the agreement (mean pairwise Cohen's κ) and the majority vote can be recomputed. A tweet can carry several labels
+(`text_dominant`, `sarcasm`, `emoji_contradicts`, `mixed_polarity`, `other`), and
+`multi_target` flags tweets that address more than one candidate. The labels are the
+only result that cannot be regenerated from code.
 
 ## License
 

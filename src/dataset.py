@@ -2,8 +2,9 @@
 import os
 import pandas as pd
 from datasets import Dataset
-from sklearn.model_selection import StratifiedKFold
-from src.preprocess import preprocess, extract_emoji_feature, POLARITY_FILTER
+from sklearn.model_selection import StratifiedKFold, train_test_split
+from src.preprocess import (preprocess, extract_emoji_feature, tweet_tag_format,
+                            POLARITY_FILTER, _TAG_RE)
 
 DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "data")
 PILKADA_PATH = os.path.join(DATA_DIR, "dataset_tweet_sentiment_pilkada_DKI_2017.csv")
@@ -13,6 +14,12 @@ DATASET_PATHS = {
 }
 
 N_SPLITS = 5
+# Inner validation (dev) split, carved out of each training fold and used only to pick
+# the checkpoint epoch; the held-out test fold is scored once, at that epoch. Stratified
+# on label x has-emoji (raw text) and seeded independently of fold and training seed,
+# so every condition, backbone and seed trains and selects on the same tweets.
+DEV_FRAC = 0.1
+DEV_SEED = 0
 
 # Fusion conditions: 2x2 over {master, esr} lexicon source x {ours, anggraeni} encoding.
 F1_CONDITIONS = ("f1_master_ours", "f1_master_ang", "f1_esr_ours", "f1_esr_ang")
@@ -38,8 +45,9 @@ def _load_raw(dataset_name: str) -> pd.DataFrame:
     return df, label2id
 
 
-def get_fold(dataset_name: str, condition: str, fold: int):
-    """Return (train_dataset, val_dataset, label2id) for a given fold."""
+def get_fold(dataset_name: str, condition: str, fold: int, backbone: str = "indobert"):
+    """Return (train_dataset, dev_dataset, test_dataset, label2id) for a given fold.
+    test = the held-out CV fold; dev = DEV_FRAC of the remaining training tweets."""
     tag_to_emoji = None
     tag_to_sentiment = None
     emoji_to_esr = None
@@ -55,6 +63,7 @@ def get_fold(dataset_name: str, condition: str, fold: int):
         emoji_to_esr = load_emoji_to_esr()
 
     df, label2id = _load_raw(dataset_name)
+    has_emoji = df["text"].astype(str).str.contains(_TAG_RE).astype(int)
 
     if condition in F1_CONDITIONS:
         # Extract feature from raw text BEFORE tags are stripped.
@@ -78,14 +87,16 @@ def get_fold(dataset_name: str, condition: str, fold: int):
         )
     else:
         df["text"] = df["text"].astype(str).apply(lambda t: preprocess(t, condition))
+    if backbone == "indobertweet":
+        df["text"] = df["text"].apply(tweet_tag_format)
 
     skf = StratifiedKFold(n_splits=N_SPLITS, shuffle=True, random_state=0)
     splits = list(skf.split(df, df["label"]))
-    train_idx, val_idx = splits[fold]
+    train_idx, test_idx = splits[fold]
+    strata = (df["label"].values * 2 + has_emoji.values)[train_idx]
+    train_idx, dev_idx = train_test_split(
+        train_idx, test_size=DEV_FRAC, stratify=strata, random_state=DEV_SEED)
 
-    train_df = df.iloc[train_idx].reset_index(drop=True)
-    val_df = df.iloc[val_idx].reset_index(drop=True)
-
-    train_ds = Dataset.from_pandas(train_df)
-    val_ds = Dataset.from_pandas(val_df)
-    return train_ds, val_ds, label2id
+    def _ds(idx):
+        return Dataset.from_pandas(df.iloc[idx].reset_index(drop=True))
+    return _ds(train_idx), _ds(dev_idx), _ds(test_idx), label2id

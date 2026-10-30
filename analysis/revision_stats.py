@@ -33,7 +33,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."
 from analysis.polarity_gain import per_tweet  # noqa: E402
 from slice_report import fold_means, mcnemar_exact_p  # noqa: E402
 from src.dataset import N_SPLITS, _load_raw  # noqa: E402
-from src.models.indobert import TUNING_MODES  # noqa: E402
+from src.results_io import RUN_TAGS  # noqa: E402
 from src.preprocess import _normalize_tag_key, _tags, extract_emoji_feature  # noqa: E402
 from src.results_io import load_runs, preds_dir, report_dir  # noqa: E402
 
@@ -378,7 +378,7 @@ def dat6(lines):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--tuning", default="lora", choices=TUNING_MODES)
+    ap.add_argument("--tuning", default="lora", choices=RUN_TAGS)
     args = ap.parse_args()
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8")

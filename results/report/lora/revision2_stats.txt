@@ -1,0 +1,163 @@
+Revision-2 statistics [lora] (analysis/revision2_stats.py)
+T1+L = f1_master_ours; conditions loaded: ['b0', 'b1', 't1', 'f1_master_ours', 'f1_master_ang', 'f1_esr_ours', 'f1_esr_ang']
+
+=== 0: run integrity ===
+  B0                      15/15 runs
+  B1                      15/15 runs
+  T1+L (ESR, pres.)       15/15 runs
+  T1+L (ESR, cont.)       15/15 runs
+  T1+L (master, pres.)    15/15 runs
+  T1+L (master, cont.)    15/15 runs
+  T1                      15/15 runs
+  (n_train, n_dev, n_test) across runs: {(648, 72, 180): 105}
+  (tuning, backbone, lr): {('lora', 'indobert', 0.0002): 105}
+  selection: {'best dev macro-F1 (dev = 10% of train fold, seed 0)': 105}
+  bookkeeping mismatches: 0
+  test folds identical across runs: yes; folds seen [0, 1, 2, 3, 4]; emoji tweets over those folds: 165
+  best_epoch distribution (epoch: runs):
+    B0                     3:1  4:3  5:11
+    B1                     3:1  4:2  5:12
+    T1+L (ESR, pres.)      3:2  4:5  5:8
+    T1+L (ESR, cont.)      3:2  4:6  5:7
+    T1+L (master, pres.)   3:2  4:6  5:7
+    T1+L (master, cont.)   4:7  5:8
+    T1                     3:1  4:4  5:10
+  sweep log: 0 Traceback(s), 0 'Error' string(s)
+
+=== a: metrics (R2.4); positive class = 1 ===
+  [all tweets] fold mean +/- SD (%, seeds averaged within fold)
+    condition                                     acc            mf1          P_neg          R_neg          P_pos          R_pos
+    B0                                   79.85+/-2.13   79.83+/-2.14   80.36+/-1.71   79.11+/-4.19   79.63+/-3.22   80.59+/-1.81
+    B1                                   80.30+/-2.35   80.27+/-2.36   80.93+/-1.80   79.33+/-4.48   79.95+/-3.46   81.26+/-1.82
+    T1                                   80.44+/-2.12   80.42+/-2.13   81.12+/-1.48   79.41+/-4.35   80.07+/-3.31   81.48+/-1.71
+    T1+L (master, cont.)                 80.07+/-2.88   80.05+/-2.89   81.03+/-2.37   78.67+/-5.04   79.46+/-3.99   81.48+/-2.40
+    T1+L (master, pres.)                 80.52+/-2.06   80.48+/-2.09   81.54+/-0.96   79.04+/-4.42   79.92+/-3.26   82.00+/-1.06
+    T1+L (ESR, cont.)                    80.48+/-2.09   80.44+/-2.13   81.53+/-0.96   78.96+/-4.50   79.88+/-3.31   82.00+/-1.06
+    T1+L (ESR, pres.)                    80.41+/-2.18   80.36+/-2.22   81.49+/-0.98   78.81+/-4.68   79.77+/-3.43   82.00+/-1.06
+  [all tweets] seed-majority per tweet (%), confusion matrix [[TN FP] [FN TP]] (rows = gold neg/pos)
+    condition                              acc     mf1   P_neg   R_neg   P_pos   R_pos   confusion
+    B0                                   80.44   80.44   80.58   80.22   80.31   80.67   [[361  89] [ 87 363]]  n=900
+    B1                                   81.00   81.00   81.78   79.78   80.26   82.22   [[359  91] [ 80 370]]  n=900
+    T1                                   80.33   80.33   80.95   79.33   79.74   81.33   [[357  93] [ 84 366]]  n=900
+    T1+L (master, cont.)                 81.00   81.00   81.92   79.56   80.13   82.44   [[358  92] [ 79 371]]  n=900
+    T1+L (master, pres.)                 80.78   80.77   81.55   79.56   80.04   82.00   [[358  92] [ 81 369]]  n=900
+    T1+L (ESR, cont.)                    80.78   80.77   81.55   79.56   80.04   82.00   [[358  92] [ 81 369]]  n=900
+    T1+L (ESR, pres.)                    80.67   80.66   81.51   79.33   79.87   82.00   [[357  93] [ 81 369]]  n=900
+
+  [emoji tweets] fold mean +/- SD (%, seeds averaged within fold)
+    condition                                     acc            mf1          P_neg          R_neg          P_pos          R_pos
+    B0                                   76.24+/-6.95   75.96+/-7.28   69.26+/-9.26   83.17+/-11.11   84.87+/-6.30   69.88+/-5.10
+    B1                                   76.39+/-5.96   76.04+/-6.37   71.07+/-8.66   79.05+/-10.38   82.07+/-5.51   73.61+/-5.20
+    T1                                   79.23+/-5.88   78.90+/-6.32   73.92+/-8.06   81.57+/-10.87   84.86+/-6.37   76.71+/-3.48
+    T1+L (master, cont.)                 79.48+/-6.70   79.15+/-7.12   75.60+/-10.06   80.00+/-10.72   83.68+/-5.99   78.70+/-6.31
+    T1+L (master, pres.)                 77.91+/-5.53   77.44+/-5.98   73.65+/-7.97   78.67+/-11.92   83.01+/-6.85   76.68+/-5.49
+    T1+L (ESR, cont.)                    77.73+/-5.64   77.20+/-6.12   73.58+/-7.94   78.28+/-12.34   82.86+/-7.08   76.68+/-5.49
+    T1+L (ESR, pres.)                    77.73+/-5.64   77.25+/-6.10   73.54+/-7.94   78.28+/-12.34   82.74+/-7.18   76.68+/-5.49
+  [emoji tweets] seed-majority per tweet (%), confusion matrix [[TN FP] [FN TP]] (rows = gold neg/pos)
+    condition                              acc     mf1   P_neg   R_neg   P_pos   R_pos   confusion
+    B0                                   76.36   76.36   70.00   84.00   84.00   70.00   [[ 63  12] [ 27  63]]  n=165
+    B1                                   76.36   76.31   71.95   78.67   80.72   74.44   [[ 59  16] [ 23  67]]  n=165
+    T1                                   78.18   78.14   73.49   81.33   82.93   75.56   [[ 61  14] [ 22  68]]  n=165
+    T1+L (master, cont.)                 80.00   79.89   76.92   80.00   82.76   80.00   [[ 60  15] [ 18  72]]  n=165
+    T1+L (master, pres.)                 77.58   77.52   73.17   80.00   81.93   75.56   [[ 60  15] [ 22  68]]  n=165
+    T1+L (ESR, cont.)                    77.58   77.52   73.17   80.00   81.93   75.56   [[ 60  15] [ 22  68]]  n=165
+    T1+L (ESR, pres.)                    77.58   77.52   73.17   80.00   81.93   75.56   [[ 60  15] [ 22  68]]  n=165
+
+=== b: paired bootstrap 95% CIs over tweets (seed-majority, 10000 resamples, rng seed 0 per contrast), pp; b/a = tweets only b / only a gets right; exact McNemar p, uncorrected ===
+    B0 -> T1                         all              n=900   80.44 ->  80.33  dAcc  -0.11 [ -1.33,  +1.11]  dF1  -0.11 [ -1.33,  +1.11]  b/a 15/16 p=1.0000
+    B0 -> T1                         emoji            n=165   76.36 ->  78.18  dAcc  +1.82 [ -3.03,  +6.67]  dF1  +1.78 [ -2.91,  +6.51]  b/a  9/6  p=0.6072
+    B0 -> T1                         non-emoji        n=735   81.36 ->  80.82  dAcc  -0.54 [ -1.63,  +0.54]  dF1  -0.54 [ -1.63,  +0.54]  b/a  6/10 p=0.4545
+    B0 -> B1                         emoji            n=165   76.36 ->  76.36  dAcc  +0.00 [ -3.64,  +3.64]  dF1  -0.06 [ -3.49,  +3.36]  b/a  4/4  p=1.0000
+    B0 -> T1+L (master, cont.)       emoji            n=165   76.36 ->  80.00  dAcc  +3.64 [ -0.61,  +7.88]  dF1  +3.53 [ -0.72,  +8.04]  b/a 10/4  p=0.1796
+    T1 -> T1+L (master, cont.)       emoji            n=165   78.18 ->  80.00  dAcc  +1.82 [ -1.21,  +4.85]  dF1  +1.75 [ -1.25,  +4.88]  b/a  5/2  p=0.4531
+    T1 -> T1+L (master, pres.)       emoji            n=165   78.18 ->  77.58  dAcc  -0.61 [ -3.64,  +1.82]  dF1  -0.62 [ -3.55,  +1.84]  b/a  2/3  p=1.0000
+    T1 -> T1+L (ESR, cont.)          emoji            n=165   78.18 ->  77.58  dAcc  -0.61 [ -3.64,  +1.82]  dF1  -0.62 [ -3.55,  +1.84]  b/a  2/3  p=1.0000
+    T1 -> T1+L (ESR, pres.)          emoji            n=165   78.18 ->  77.58  dAcc  -0.61 [ -3.64,  +1.82]  dF1  -0.62 [ -3.55,  +1.84]  b/a  2/3  p=1.0000
+    T1 -> T1+L (master, cont.)       all              n=900   80.33 ->  81.00  dAcc  +0.67 [ -0.78,  +2.11]  dF1  +0.66 [ -0.78,  +2.11]  b/a 24/18 p=0.4408
+    B0 -> T1                         emoji pos-gold   n= 90   70.00 ->  75.56  dAcc  +5.56 [ -1.11, +12.22]  b/a  8/3  p=0.2266
+    B0 -> T1                         emoji neg-gold   n= 75   84.00 ->  81.33  dAcc  -2.67 [ -8.00,  +2.67]  b/a  1/3  p=0.6250
+    B0 -> B1                         emoji pos-gold   n= 90   70.00 ->  74.44  dAcc  +4.44 [ +1.11,  +8.89]  b/a  4/0  p=0.1250
+    B0 -> B1                         emoji neg-gold   n= 75   84.00 ->  78.67  dAcc  -5.33 [-10.67,  -1.33]  b/a  0/4  p=0.1250
+    B0 -> T1+L (master, cont.)       emoji pos-gold   n= 90   70.00 ->  80.00  dAcc +10.00 [ +4.44, +16.67]  b/a  9/0  p=0.0039
+    B0 -> T1+L (master, cont.)       emoji neg-gold   n= 75   84.00 ->  80.00  dAcc  -4.00 [-10.67,  +1.33]  b/a  1/4  p=0.3750
+    T1 -> T1+L (master, cont.)       emoji pos-gold   n= 90   75.56 ->  80.00  dAcc  +4.44 [ +0.00, +10.00]  b/a  5/1  p=0.2188
+    T1 -> T1+L (master, cont.)       emoji neg-gold   n= 75   81.33 ->  80.00  dAcc  -1.33 [ -4.00,  +0.00]  b/a  0/1  p=1.0000
+  (macro-F1 difference omitted within a single gold half: one class only)
+
+  All pairwise exact McNemar tests, emoji tweets (EXPLORATORY, uncorrected)
+    B0 vs B1                                       b/a  4/4  p=1.0000
+    B0 vs T1                                       b/a  9/6  p=0.6072
+    B0 vs T1+L (master, cont.)                     b/a 10/4  p=0.1796
+    B0 vs T1+L (master, pres.)                     b/a  7/5  p=0.7744
+    B0 vs T1+L (ESR, cont.)                        b/a  7/5  p=0.7744
+    B0 vs T1+L (ESR, pres.)                        b/a  7/5  p=0.7744
+    B1 vs T1                                       b/a  6/3  p=0.5078
+    B1 vs T1+L (master, cont.)                     b/a  7/1  p=0.0703
+    B1 vs T1+L (master, pres.)                     b/a  4/2  p=0.6875
+    B1 vs T1+L (ESR, cont.)                        b/a  4/2  p=0.6875
+    B1 vs T1+L (ESR, pres.)                        b/a  4/2  p=0.6875
+    T1 vs T1+L (master, cont.)                     b/a  5/2  p=0.4531
+    T1 vs T1+L (master, pres.)                     b/a  2/3  p=1.0000
+    T1 vs T1+L (ESR, cont.)                        b/a  2/3  p=1.0000
+    T1 vs T1+L (ESR, pres.)                        b/a  2/3  p=1.0000
+    T1+L (master, cont.) vs T1+L (master, pres.)   b/a  2/6  p=0.2891
+    T1+L (master, cont.) vs T1+L (ESR, cont.)      b/a  2/6  p=0.2891
+    T1+L (master, cont.) vs T1+L (ESR, pres.)      b/a  2/6  p=0.2891
+    T1+L (master, pres.) vs T1+L (ESR, cont.)      b/a  0/0  p=1.0000
+    T1+L (master, pres.) vs T1+L (ESR, pres.)      b/a  0/0  p=1.0000
+    T1+L (ESR, cont.) vs T1+L (ESR, pres.)         b/a  0/0  p=1.0000
+
+=== c: primary family (R2.3) ===
+  Primary contrasts defined by the RQs: RQ1 B0 vs T1, RQ2 T1 vs T1+L (master, cont.), emoji tweets. Holm over the family; all other tests exploratory.
+    B0 -> T1                         emoji            n=165   76.36 ->  78.18  dAcc  +1.82 [ -3.03,  +6.67]  dF1  +1.78 [ -2.91,  +6.51]  b/a  9/6  p=0.6072
+      Holm-adjusted p = 0.9062  -> not significant at 0.05
+    T1 -> T1+L (master, cont.)       emoji            n=165   78.18 ->  80.00  dAcc  +1.82 [ -1.21,  +4.85]  dF1  +1.75 [ -1.25,  +4.88]  b/a  5/2  p=0.4531
+      Holm-adjusted p = 0.9062  -> not significant at 0.05
+
+=== d: power of the exact McNemar test (R1.1), two-sided, target power 80% ===
+  Effect = accuracy difference; the discordant rate is held fixed (observed, then a grid of assumed rates).
+  B0 -> T1 (emoji): n=165, discordant 15 (9.1%), observed |dAcc| = 1.82pp
+    alpha=0.050 (uncorrected): power at observed effect 0.08; MDE at observed discordance 6.7pp (~11 net tweets); needed for observed effect at 80%: ~2156 tweets
+    alpha=0.025 (Holm, smaller p of 2): power at observed effect 0.04; MDE at observed discordance 7.2pp (~12 net tweets); needed for observed effect at 80%: ~2611 tweets
+  T1 -> T1+L (master, cont.) (emoji): n=165, discordant 7 (4.2%), observed |dAcc| = 1.82pp
+    alpha=0.050 (uncorrected): power at observed effect 0.10; MDE at observed discordance unreachable (max power 0.70, all discordant one way); needed for observed effect at 80%: ~1005 tweets
+    alpha=0.025 (Holm, smaller p of 2): power at observed effect 0.05; MDE at observed discordance unreachable (max power 0.55, all discordant one way); needed for observed effect at 80%: ~1217 tweets
+  MDE at n=165, alpha=0.05, by assumed discordant rate:
+    discordant    5%: 4.9pp (~8 net tweets)
+    discordant   10%: 7.1pp (~12 net tweets)
+    discordant   15%: 8.8pp (~15 net tweets)
+    discordant   20%: 10.1pp (~17 net tweets)
+
+=== e: epoch-selection bias, test macro-F1 over ALL test tweets (%), mean over runs ===
+  v1-style = best test epoch (the v1 rule); dev = dev-selected epoch (reported); last = epoch 5. Same 648-tweet training sets throughout; the v1 runs themselves trained on 720.
+    condition              runs  v1-style     dev    last  v1-dev max v1-dev  dev=v1 pick
+    B0                       15     80.06   79.83   79.79   +0.23      +1.84    12/15    
+    B1                       15     80.64   80.27   80.19   +0.37      +1.68    10/15    
+    T1+L (ESR, pres.)        15     81.28   80.36   81.05   +0.91      +5.95     6/15    
+    T1+L (ESR, cont.)        15     81.17   80.44   80.87   +0.73      +5.39     9/15    
+    T1+L (master, pres.)     15     81.28   80.48   81.09   +0.80      +4.80     8/15    
+    T1+L (master, cont.)     15     80.38   80.05   80.12   +0.34      +2.12     7/15    
+    T1                       15     80.79   80.42   80.34   +0.37      +2.22    10/15    
+  over all runs: mean v1-dev gap +0.54pp
+
+=== f: robustness, last-epoch predictions (pred_last, no selection) ===
+=== f.1: primary family with pred_last ===
+  Primary contrasts defined by the RQs: RQ1 B0 vs T1, RQ2 T1 vs T1+L (master, cont.), emoji tweets. Holm over the family; all other tests exploratory.
+    B0 -> T1                         emoji            n=165   76.36 ->  78.18  dAcc  +1.82 [ -3.03,  +6.67]  dF1  +1.78 [ -2.95,  +6.45]  b/a  9/6  p=0.6072
+      Holm-adjusted p = 1.0000  -> not significant at 0.05
+    T1 -> T1+L (master, cont.)       emoji            n=165   78.18 ->  79.39  dAcc  +1.21 [ -1.82,  +4.24]  dF1  +1.19 [ -1.80,  +4.23]  b/a  4/2  p=0.6875
+      Holm-adjusted p = 1.0000  -> not significant at 0.05
+
+  f.2: accuracy (%) by subset, fold mean +/- SD: selected (pred) vs last (pred_last)
+    condition                                  all sel        all last       emoji sel      emoji last   non-emoji sel  non-emoji last
+    B0                                     79.85+/-2.1     79.81+/-2.2     76.24+/-6.9     75.08+/-6.5     80.59+/-1.4     80.78+/-1.6
+    B1                                     80.30+/-2.3     80.22+/-2.0     76.39+/-6.0     75.57+/-5.1     81.10+/-1.6     81.24+/-1.4
+    T1                                     80.44+/-2.1     80.37+/-2.2     79.23+/-5.9     78.94+/-6.1     80.69+/-1.4     80.69+/-1.4
+    T1+L (master, cont.)                   80.07+/-2.9     80.15+/-2.6     79.48+/-6.7     79.28+/-6.1     80.18+/-2.3     80.31+/-2.2
+    T1+L (master, pres.)                   80.52+/-2.1     81.11+/-2.2     77.91+/-5.5     79.04+/-5.4     81.11+/-1.3     81.55+/-1.6
+    T1+L (ESR, cont.)                      80.48+/-2.1     80.89+/-2.1     77.73+/-5.6     78.12+/-5.1     81.11+/-1.3     81.46+/-1.5
+    T1+L (ESR, pres.)                      80.41+/-2.2     81.07+/-2.2     77.73+/-5.6     79.04+/-5.4     81.02+/-1.4     81.51+/-1.6
+  f.3: dilution (B0 -> T1 gain, fold means, pp)
+    pred       all +0.59  emoji +2.99  non-emoji +0.10  emoji/all 5.0x
+    pred_last  all +0.56  emoji +3.86  non-emoji -0.09  emoji/all 6.9x
+

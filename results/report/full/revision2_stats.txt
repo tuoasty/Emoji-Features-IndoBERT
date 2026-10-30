@@ -1,0 +1,83 @@
+Revision-2 statistics [full] (analysis/revision2_stats.py)
+T1+L = f1_master_ours; conditions loaded: ['b0', 't1']
+
+=== 0: run integrity ===
+  B0                      15/15 runs
+  T1                      15/15 runs
+  (n_train, n_dev, n_test) across runs: {(648, 72, 180): 30}
+  (tuning, backbone, lr): {('full', 'indobert', 2e-05): 30}
+  selection: {'best dev macro-F1 (dev = 10% of train fold, seed 0)': 30}
+  bookkeeping mismatches: 0
+  test folds identical across runs: yes; folds seen [0, 1, 2, 3, 4]; emoji tweets over those folds: 165
+  best_epoch distribution (epoch: runs):
+    B0                     1:4  2:5  3:3  4:2  5:1
+    T1                     1:3  2:7  4:3  5:2
+  sweep log: 0 Traceback(s), 0 'Error' string(s)
+
+=== a: metrics (R2.4); positive class = 1 ===
+  [all tweets] fold mean +/- SD (%, seeds averaged within fold)
+    condition                                     acc            mf1          P_neg          R_neg          P_pos          R_pos
+    B0                                   79.63+/-1.33   79.57+/-1.33   80.31+/-2.04   78.96+/-4.85   79.66+/-3.47   80.30+/-3.54
+    T1                                   80.26+/-1.94   80.19+/-2.01   81.23+/-1.78   79.04+/-5.87   79.96+/-3.76   81.48+/-3.13
+  [all tweets] seed-majority per tweet (%), confusion matrix [[TN FP] [FN TP]] (rows = gold neg/pos)
+    condition                              acc     mf1   P_neg   R_neg   P_pos   R_pos   confusion
+    B0                                   80.56   80.55   81.18   79.56   79.96   81.56   [[358  92] [ 83 367]]  n=900
+    T1                                   79.67   79.67   80.00   79.11   79.34   80.22   [[356  94] [ 89 361]]  n=900
+
+  [emoji tweets] fold mean +/- SD (%, seeds averaged within fold)
+    condition                                     acc            mf1          P_neg          R_neg          P_pos          R_pos
+    B0                                   77.91+/-6.18   77.61+/-6.54   72.40+/-8.58   81.20+/-9.57   83.73+/-5.44   74.62+/-5.61
+    T1                                   78.89+/-4.82   78.48+/-5.18   76.04+/-7.91   77.46+/-9.28   82.02+/-5.54   79.66+/-5.35
+  [emoji tweets] seed-majority per tweet (%), confusion matrix [[TN FP] [FN TP]] (rows = gold neg/pos)
+    condition                              acc     mf1   P_neg   R_neg   P_pos   R_pos   confusion
+    B0                                   80.00   79.95   75.61   82.67   84.34   77.78   [[ 62  13] [ 20  70]]  n=165
+    T1                                   76.97   76.90   72.84   78.67   80.95   75.56   [[ 59  16] [ 22  68]]  n=165
+
+=== b: paired bootstrap 95% CIs over tweets (seed-majority, 10000 resamples, rng seed 0 per contrast), pp; b/a = tweets only b / only a gets right; exact McNemar p, uncorrected ===
+    B0 -> T1                         all              n=900   80.56 ->  79.67  dAcc  -0.89 [ -2.33,  +0.56]  dF1  -0.89 [ -2.33,  +0.56]  b/a 17/25 p=0.2800
+    B0 -> T1                         emoji            n=165   80.00 ->  76.97  dAcc  -3.03 [ -6.06,  +0.00]  dF1  -3.05 [ -6.34,  -0.03]  b/a  1/6  p=0.1250
+    B0 -> T1                         non-emoji        n=735   80.68 ->  80.27  dAcc  -0.41 [ -2.04,  +1.22]  dF1  -0.41 [ -2.03,  +1.21]  b/a 16/19 p=0.7359
+    B0 -> T1                         emoji pos-gold   n= 90   77.78 ->  75.56  dAcc  -2.22 [ -6.67,  +2.22]  b/a  1/3  p=0.6250
+    B0 -> T1                         emoji neg-gold   n= 75   82.67 ->  78.67  dAcc  -4.00 [ -9.33,  +0.00]  b/a  0/3  p=0.2500
+  (macro-F1 difference omitted within a single gold half: one class only)
+
+  All pairwise exact McNemar tests, emoji tweets (EXPLORATORY, uncorrected)
+    B0 vs T1                                       b/a  1/6  p=0.1250
+
+=== c: primary family (R2.3) ===
+  Primary contrasts defined by the RQs: RQ1 B0 vs T1, RQ2 T1 vs T1+L (master, cont.), emoji tweets. Holm over the family; all other tests exploratory.
+    B0 -> T1                         emoji            n=165   80.00 ->  76.97  dAcc  -3.03 [ -6.06,  +0.00]  dF1  -3.05 [ -6.34,  -0.03]  b/a  1/6  p=0.1250
+      Holm-adjusted p = 0.1250  -> not significant at 0.05
+
+=== d: power of the exact McNemar test (R1.1), two-sided, target power 80% ===
+  Effect = accuracy difference; the discordant rate is held fixed (observed, then a grid of assumed rates).
+  B0 -> T1 (emoji): n=165, discordant 7 (4.2%), observed |dAcc| = 3.03pp
+    alpha=0.050 (uncorrected): power at observed effect 0.32; MDE at observed discordance unreachable (max power 0.70, all discordant one way); needed for observed effect at 80%: ~360 tweets
+    alpha=0.025 (Holm, smaller p of 2): power at observed effect 0.21; MDE at observed discordance unreachable (max power 0.55, all discordant one way); needed for observed effect at 80%: ~437 tweets
+  MDE at n=165, alpha=0.05, by assumed discordant rate:
+    discordant    5%: 4.9pp (~8 net tweets)
+    discordant   10%: 7.1pp (~12 net tweets)
+    discordant   15%: 8.8pp (~15 net tweets)
+    discordant   20%: 10.1pp (~17 net tweets)
+
+=== e: epoch-selection bias, test macro-F1 over ALL test tweets (%), mean over runs ===
+  v1-style = best test epoch (the v1 rule); dev = dev-selected epoch (reported); last = epoch 5. Same 648-tweet training sets throughout; the v1 runs themselves trained on 720.
+    condition              runs  v1-style     dev    last  v1-dev max v1-dev  dev=v1 pick
+    B0                       15     80.61   79.57   79.35   +1.04      +3.89     5/15    
+    T1                       15     82.16   80.19   80.35   +1.97      +5.19     3/15    
+  over all runs: mean v1-dev gap +1.50pp
+
+=== f: robustness, last-epoch predictions (pred_last, no selection) ===
+=== f.1: primary family with pred_last ===
+  Primary contrasts defined by the RQs: RQ1 B0 vs T1, RQ2 T1 vs T1+L (master, cont.), emoji tweets. Holm over the family; all other tests exploratory.
+    B0 -> T1                         emoji            n=165   76.97 ->  79.39  dAcc  +2.42 [ -1.82,  +6.67]  dF1  +2.37 [ -1.81,  +6.59]  b/a  8/4  p=0.3877
+      Holm-adjusted p = 0.3877  -> not significant at 0.05
+
+  f.2: accuracy (%) by subset, fold mean +/- SD: selected (pred) vs last (pred_last)
+    condition                                  all sel        all last       emoji sel      emoji last   non-emoji sel  non-emoji last
+    B0                                     79.63+/-1.3     79.37+/-1.3     77.91+/-6.2     76.52+/-4.3     79.96+/-1.6     79.94+/-2.3
+    T1                                     80.26+/-1.9     80.37+/-1.7     78.89+/-4.8     80.03+/-3.4     80.57+/-1.9     80.39+/-2.5
+  f.3: dilution (B0 -> T1 gain, fold means, pp)
+    pred       all +0.63  emoji +0.98  non-emoji +0.61  emoji/all 1.6x
+    pred_last  all +1.00  emoji +3.52  non-emoji +0.44  emoji/all 3.5x
+

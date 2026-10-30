@@ -67,6 +67,15 @@ def preprocess(text: str, condition: str, tag_to_emoji: dict = None,
 
 _TAG_RE = re.compile(r"<[^>]+>")
 
+
+def tweet_tag_format(text: str) -> str:
+    """IndoBERTweet input: rewrite <OK HAND> as :ok_hand:, the emoji-package text form
+    it was pretrained on (its vocabulary has no '<' or '>', which tokenize to [UNK]).
+    Mentions and URLs are left as they are, so both backbones see the same content:
+    the mentions here are mostly the candidates' handles, i.e. the stance target."""
+    return _TAG_RE.sub(
+        lambda m: ":" + "_".join(_normalize_tag_key(m.group(0)).split()) + ":", text)
+
 # Feature dimensionality per fusion condition. Drives F1FusionModel's classifier
 # input width and the dataset's "torch" format columns.
 FEATURE_DIM = {

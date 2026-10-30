@@ -2,10 +2,9 @@
   acc = mean +/- std over folds (seeds averaged within fold); helped/hurt and
   McNemar = per tweet, seed-majority correctness, paired on (fold, val_index)
     condition         emoji acc    n  helped  hurt   net  McNemar p
-    b0           74.23 +/- 6.23  165   (reference)
-    t1           79.19 +/- 5.95  165       9     4    +5     0.2668
-    t1_pos       81.73 +/- 6.98  165      16     6   +10     0.0525
-    t1_neg       81.93 +/- 5.64  165      14     0   +14     0.0001
+    b0           76.24 +/- 6.95  165   (reference)
+    t1           79.23 +/- 5.88  165       9     6    +3     0.6072
+    t1_pos       80.23 +/- 5.96  165      11     7    +4     0.4807
 
   CAVEAT: t1_pos / t1_neg sort tags by the master lexicon, which agrees closely
   with gold (circularity). Diagnostic of the mechanism, not a method.
